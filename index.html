@@ -1,0 +1,2455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aristizabal Plata — Arquitectura jurídica y estratégica para empresas</title>
+  <meta name="description"
+    content="Aristizabal Plata: firma de servicios jurídicos y empresariales con enfoque estratégico. Seguridad jurídica, estructura para crecer y visión internacional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --bg-alt: #efece4;
+      --bg-soft: #f1eee5;
+      --ink: #0e1620;
+      --ink-soft: #2b3340;
+      --muted: #6b7280;
+      --line: #dcd6c8;
+      --line-soft: #e6e1d4;
+      --accent: #1f3a5f;
+      --gold: #a98a4b;
+      --white: #ffffff;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --container: 1280px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      font-feature-settings: 'ss01', 'ss02', 'liga';
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.015em;
+      color: var(--ink)
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: .96;
+      letter-spacing: -.035em;
+      font-weight: 400
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+      line-height: 1.02;
+      letter-spacing: -.028em;
+      font-weight: 400
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.22;
+      letter-spacing: -.012em
+    }
+
+    p {
+      color: var(--ink-soft);
+      font-size: .98rem;
+      line-height: 1.65
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 36px
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .eyebrow::before {
+      content: "//";
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: -.05em;
+      font-family: 'Inter', sans-serif;
+      background: none;
+      width: auto;
+      height: auto;
+    }
+
+    /* ───── Header ───── */
+    header.site {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(246, 244, 239, .82);
+      backdrop-filter: saturate(160%) blur(16px);
+      -webkit-backdrop-filter: saturate(160%) blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .4s var(--ease), background .4s var(--ease);
+    }
+
+    header.site.scrolled {
+      border-bottom-color: var(--line-soft)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 110px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      height: 130px
+    }
+
+    .brand img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: opacity .3s var(--ease)
+    }
+
+    .brand:hover img {
+      opacity: .85
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 38px
+    }
+
+    .menu a {
+      font-size: .86rem;
+      color: var(--ink-soft);
+      font-weight: 400;
+      transition: color .25s var(--ease);
+      position: relative;
+    }
+
+    .menu a:hover {
+      color: var(--ink)
+    }
+
+    .menu a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 1px;
+      background: var(--ink);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s var(--ease);
+    }
+
+    .menu a:not(.btn):hover::after {
+      transform: scaleX(1)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 2px;
+      background: var(--ink);
+      color: var(--bg) !important;
+      font-size: .84rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      transition: background .3s var(--ease), color .3s var(--ease), gap .3s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn .arr {
+      display: inline-block;
+      transition: transform .35s var(--ease)
+    }
+
+    .btn:hover {
+      background: var(--accent)
+    }
+
+    .btn:hover .arr {
+      transform: translate(3px, -3px)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink) !important;
+      border: 1px solid var(--ink);
+    }
+
+    .btn-ghost:hover {
+      background: var(--ink);
+      color: var(--bg) !important
+    }
+
+    .burger {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: transparent;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center
+    }
+
+    .burger span {
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: var(--ink);
+      position: relative
+    }
+
+    .burger span::before,
+    .burger span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--ink)
+    }
+
+    .burger span::before {
+      top: -5px
+    }
+
+    .burger span::after {
+      top: 5px
+    }
+
+    /* ───── Hero ───── */
+    .hero {
+      padding: 170px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .hero-loc {
+      font-size: .72rem;
+      color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      margin-top: 64px;
+      font-size: clamp(3.2rem, 9vw, 9rem);
+      line-height: .92;
+      letter-spacing: -.04em;
+      font-weight: 400;
+      max-width: 18ch;
+    }
+
+    .hero-title .it {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .hero-foot {
+      margin-top: 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+    }
+
+    .hero-sub {
+      max-width: 440px;
+      font-size: 1.04rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end
+    }
+
+    .hero-meta {
+      margin-top: 96px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta-item {
+      padding-right: 24px
+    }
+
+    .meta-item .num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--ink);
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .meta-item .lab {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 14px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    /* ───── Sections ───── */
+    section {
+      padding: 140px 0;
+      position: relative
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 72px
+    }
+
+    .section-head h2 {
+      margin-top: 24px
+    }
+
+    .section-head p {
+      margin-top: 22px;
+      font-size: 1.02rem;
+      max-width: 560px;
+      line-height: 1.7
+    }
+
+    /* About */
+    .about {
+      background: var(--bg)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 56px;
+      border-top: 1px solid var(--line)
+    }
+
+    .pillar {
+      padding: 32px 28px 28px 0;
+      border-bottom: 1px solid var(--line);
+      transition: padding .4s var(--ease);
+      position: relative;
+    }
+
+    .pillar:nth-child(odd) {
+      padding-right: 32px;
+      border-right: 1px solid var(--line)
+    }
+
+    .pillar:nth-child(even) {
+      padding-left: 32px
+    }
+
+    .pillar:nth-last-child(-n+2) {
+      border-bottom: none
+    }
+
+    .pillar:hover {
+      padding-top: 28px
+    }
+
+    .pillar .n {
+      font-family: 'Inter', sans-serif;
+      color: var(--muted);
+      font-size: .7rem;
+      margin-bottom: 14px;
+      display: block;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .pillar h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: var(--ink);
+      letter-spacing: -.015em;
+    }
+
+    .pillar p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.55
+    }
+
+    .about-side {
+      position: sticky;
+      top: 120px
+    }
+
+    .about-quote-block {
+      padding: 48px 0 0;
+      position: relative;
+    }
+
+    .about-quote-block::before {
+      content: "“";
+      font-family: 'Fraunces', serif;
+      font-size: 6rem;
+      line-height: 0;
+      color: var(--gold);
+      opacity: .45;
+      position: absolute;
+      top: 48px;
+      left: -8px;
+    }
+
+    .about-side blockquote {
+      font-family: 'Fraunces', serif;
+      font-size: 1.85rem;
+      line-height: 1.25;
+      font-weight: 300;
+      color: var(--ink);
+      letter-spacing: -.018em;
+      font-style: italic;
+      padding-left: 48px;
+    }
+
+    .about-side .sig {
+      margin-top: 40px;
+      padding-left: 48px;
+      font-size: .74rem;
+      color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase
+    }
+
+    /* Services */
+    .services {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft)
+    }
+
+    .svc-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 72px
+    }
+
+    .svc-head .section-head {
+      margin-bottom: 0
+    }
+
+    .svc-tabs {
+      display: flex;
+      gap: 0;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      margin-bottom: 0;
+    }
+
+    .svc-tab {
+      padding: 22px 28px 22px 0;
+      font-size: .86rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      color: var(--muted);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: color .3s var(--ease);
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      border-right: 1px solid var(--line);
+      padding-right: 28px;
+      margin-right: 28px;
+      position: relative;
+    }
+
+    .svc-tab:last-child {
+      border-right: none;
+      margin-right: 0;
+      padding-right: 0
+    }
+
+    .svc-tab .tnum {
+      font-family: 'Fraunces', serif;
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+
+    .svc-tab:hover {
+      color: var(--ink)
+    }
+
+    .svc-tab.active {
+      color: var(--ink)
+    }
+
+    .svc-tab.active .tnum {
+      color: var(--gold)
+    }
+
+    .svc-tab.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 28px;
+      top: -1px;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .svc-tab:last-child.active::after {
+      right: 0
+    }
+
+    .svc-panels {
+      position: relative;
+      padding-top: 64px
+    }
+
+    .svc-panel {
+      display: none;
+      animation: fade .6s var(--ease)
+    }
+
+    .svc-panel.active {
+      display: grid
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(12px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .svc-panel {
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+      align-items: start
+    }
+
+    .svc-info {
+      position: sticky;
+      top: 120px
+    }
+
+    .svc-info h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 2.6rem;
+      margin-bottom: 24px;
+      letter-spacing: -.025em;
+      line-height: 1.05
+    }
+
+    .svc-info p {
+      font-size: .96rem;
+      max-width: 380px;
+      line-height: 1.7;
+      color: var(--ink-soft)
+    }
+
+    .svc-num {
+      font-family: 'Fraunces', serif;
+      font-size: .82rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-weight: 400;
+      letter-spacing: .04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .svc-num::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--ink-soft)
+    }
+
+    .svc-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .svc-list li {
+      list-style: none;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .92rem;
+      color: var(--ink-soft);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: color .3s var(--ease), transform .3s var(--ease);
+      cursor: default;
+    }
+
+    .svc-list li:hover {
+      color: var(--ink);
+      transform: translateX(4px)
+    }
+
+    .svc-list li::before {
+      content: "→";
+      color: var(--gold);
+      font-size: .85rem;
+      flex: none;
+      opacity: .7;
+      transition: opacity .3s var(--ease);
+    }
+
+    .svc-list li:hover::before {
+      opacity: 1
+    }
+
+    /* Brands */
+    .brands {
+      padding: 80px 0 90px;
+      background: var(--ink);
+      overflow: hidden;
+      position: relative
+    }
+
+    .brands-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap
+    }
+
+    .brands-head .eyebrow {
+      color: rgba(255, 255, 255, .55)
+    }
+
+    .brands-head .eyebrow::before {
+      color: var(--gold)
+    }
+
+    .brands-head h2 {
+      font-size: 2rem;
+      margin-top: 14px;
+      color: var(--bg);
+      font-weight: 400;
+      max-width: 14ch;
+      line-height: 1.1
+    }
+
+    .brands-head .b-side {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .5);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      max-width: 280px;
+      text-align: right;
+      line-height: 1.7
+    }
+
+    .marquee {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .track {
+      display: flex;
+      gap: 90px;
+      align-items: center;
+      width: max-content;
+      animation: scroll 45s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    .logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 20px;
+      opacity: .35;
+      filter: brightness(.9) contrast(.95);
+      transition: opacity .4s var(--ease), filter .4s var(--ease);
+      white-space: nowrap;
+    }
+
+    .logo-item:hover {
+      opacity: .95;
+      filter: brightness(1) contrast(1)
+    }
+
+    .logo-item img {
+      height: 46px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain
+    }
+
+    /* Events */
+    .events {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .events h2,
+    .events h3 {
+      color: var(--bg)
+    }
+
+    .events p {
+      color: rgba(246, 244, 239, .65)
+    }
+
+    .events .eyebrow {
+      color: rgba(246, 244, 239, .55)
+    }
+
+    .events .eyebrow::before {
+      color: var(--gold)
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+      align-items: start
+    }
+
+    .event-card {
+      overflow: hidden;
+      transition: transform .5s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px)
+    }
+
+    .event-card:nth-child(1) {
+      grid-row: span 2
+    }
+
+    .event-card:nth-child(2) {
+      margin-top: 60px
+    }
+
+    .event-card:nth-child(3) {
+      margin-top: 30px
+    }
+
+    .event-img {
+      aspect-ratio: 4/3;
+      background: linear-gradient(160deg, #1a2738, #2b4264);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, .25);
+      font-size: .7rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    .event-card:nth-child(1) .event-img {
+      aspect-ratio: 5/6
+    }
+
+    .event-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .35));
+      pointer-events: none;
+    }
+
+    .event-img.alt1 {
+      background: linear-gradient(160deg, #243a52, #3d5a7a)
+    }
+
+    .event-img.alt2 {
+      background: linear-gradient(160deg, #1f2c3d, #52668a)
+    }
+
+    .event-body {
+      padding: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .event-meta {
+      font-size: .7rem;
+      color: rgba(246, 244, 239, .55);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .event-meta::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+      opacity: .6
+    }
+
+    .event-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      font-weight: 400;
+      letter-spacing: -.018em;
+      line-height: 1.15
+    }
+
+    .event-card:nth-child(1) h3 {
+      font-size: 1.7rem
+    }
+
+    .event-card p {
+      font-size: .92rem;
+      line-height: 1.6;
+      max-width: 42ch
+    }
+
+    /* Reviews */
+    #reviews {
+      background: var(--bg)
+    }
+
+    .reviews-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .reviews-layout .section-head {
+      margin-bottom: 0;
+      position: sticky;
+      top: 120px
+    }
+
+    .reviews-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0
+    }
+
+    .review {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 36px;
+      align-items: start;
+      transition: padding .4s var(--ease);
+    }
+
+    .review:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .review:hover {
+      padding-left: 8px
+    }
+
+    .review-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 130px;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: .95rem
+    }
+
+    .review-meta .src {
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .16em;
+      text-transform: uppercase
+    }
+
+    .review-body {
+      display: flex;
+      flex-direction: column;
+      gap: 24px
+    }
+
+    .review-body p {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      line-height: 1.4;
+      color: var(--ink);
+      font-weight: 300;
+      letter-spacing: -.012em;
+      font-style: italic;
+      max-width: 48ch;
+    }
+
+    .review-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .ravatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .reviewer .nm {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--ink)
+    }
+
+    .reviewer .role {
+      font-size: .74rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+      margin-top: 2px
+    }
+
+    .gtag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .74rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+
+    .gdot {
+      display: inline-flex;
+      gap: 2px
+    }
+
+    .gdot i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: block
+    }
+
+    .gdot i:nth-child(1) {
+      background: #4285f4
+    }
+
+    .gdot i:nth-child(2) {
+      background: #ea4335
+    }
+
+    .gdot i:nth-child(3) {
+      background: #fbbc05
+    }
+
+    .gdot i:nth-child(4) {
+      background: #34a853
+    }
+
+    /* Team — editorial carousel */
+    .team {
+      background: var(--bg-alt)
+    }
+
+    .team-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 64px
+    }
+
+    .team-head .section-head {
+      margin-bottom: 0;
+      max-width: 560px
+    }
+
+    .team-nav {
+      display: flex;
+      gap: 8px
+    }
+
+    .team-nav button {
+      width: 48px;
+      height: 48px;
+      border-radius: 2px;
+      border: 1px solid var(--ink);
+      background: transparent;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: all .3s var(--ease);
+      color: var(--ink);
+    }
+
+    .team-nav button:hover {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .team-nav button:disabled {
+      opacity: .25;
+      cursor: not-allowed;
+      border-color: var(--line)
+    }
+
+    .team-nav button:disabled:hover {
+      background: transparent;
+      color: var(--ink)
+    }
+
+    .team-nav button svg {
+      width: 16px;
+      height: 16px
+    }
+
+    .team-track-wrap {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, black 0, black 96%, transparent);
+      mask-image: linear-gradient(90deg, black 0, black 96%, transparent);
+    }
+
+    .team-track {
+      display: flex;
+      gap: 32px;
+      transition: transform .7s var(--ease);
+      will-change: transform;
+    }
+
+    .member {
+      flex: 0 0 calc((100% - 96px) / 4);
+      position: relative;
+      transition: transform .5s var(--ease);
+    }
+
+    .member:nth-child(even) {
+      margin-top: 32px
+    }
+
+    .member:hover {
+      transform: translateY(-6px)
+    }
+
+    .member-photo {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--ink);
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .member-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, transparent 50%, rgba(14, 22, 32, .75));
+      opacity: .55;
+      transition: opacity .5s var(--ease);
+    }
+
+    .member:hover .member-photo::before {
+      opacity: .2
+    }
+
+    .member-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(80%) contrast(1.05) brightness(.94);
+      transition: transform 1s var(--ease), filter .6s var(--ease);
+    }
+
+    .member:hover .member-photo img {
+      transform: scale(1.04);
+      filter: grayscale(0%) contrast(1) brightness(1)
+    }
+
+    .member-body {
+      padding: 20px 0 0
+    }
+
+    .member-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      font-weight: 400;
+      letter-spacing: -.012em
+    }
+
+    .member-role {
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .16em;
+      text-transform: uppercase
+    }
+
+    .member-num {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      font-size: .68rem;
+      color: rgba(255, 255, 255, .7);
+      letter-spacing: .16em;
+      font-family: 'Fraunces', serif;
+    }
+
+    .member-overlay {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 24px;
+      z-index: 2;
+      color: rgba(255, 255, 255, .92);
+      font-size: .84rem;
+      line-height: 1.5;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .5s var(--ease), transform .5s var(--ease);
+      pointer-events: none;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .member:hover .member-overlay {
+      opacity: 1;
+      transform: none
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--bg);
+      padding: 140px 0 0
+    }
+
+    .contact-head {
+      max-width: 800px;
+      margin-bottom: 72px
+    }
+
+    .contact-head h2 {
+      margin-top: 24px;
+      font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+      max-width: 18ch
+    }
+
+    .contact-head p {
+      margin-top: 24px;
+      font-size: 1.04rem;
+      max-width: 540px;
+      color: var(--ink-soft)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      margin-top: 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .contact-info li {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      align-items: baseline;
+    }
+
+    .contact-info li .lab {
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase
+    }
+
+    .contact-info li .val {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      font-weight: 400;
+      letter-spacing: -.008em
+    }
+
+    .form {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px
+    }
+
+    .field {
+      margin-bottom: 8px
+    }
+
+    .field label {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 500
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0 14px;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: .98rem;
+      transition: border-color .3s var(--ease);
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: var(--muted);
+      opacity: .6
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      outline: none;
+      border-bottom-color: var(--ink)
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 100px
+    }
+
+    .form .btn {
+      margin-top: 32px;
+      background: var(--ink);
+      color: var(--bg) !important;
+      padding: 16px 28px
+    }
+
+    .form .btn:hover {
+      background: var(--accent)
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg);
+      color: var(--ink-soft);
+      padding: 120px 0 0;
+      font-size: .85rem;
+      border-top: 1px solid var(--line);
+      margin-top: 120px
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 80px;
+    }
+
+    .foot-col h5 {
+      font-family: 'Inter', sans-serif;
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .foot-col ul {
+      list-style: none
+    }
+
+    .foot-col li {
+      padding: 7px 0
+    }
+
+    .foot-col a {
+      color: var(--ink);
+      font-size: .92rem;
+      transition: color .25s var(--ease)
+    }
+
+    .foot-col a:hover {
+      color: var(--gold)
+    }
+
+    .foot-intro p {
+      font-size: .92rem;
+      color: var(--ink-soft);
+      max-width: 32ch;
+      line-height: 1.65;
+      margin-top: 0
+    }
+
+    .foot-intro .foot-mini-logo {
+      height: 42px;
+      width: auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .wordmark-wrap {
+      overflow: hidden;
+      line-height: .85;
+      padding-bottom: 8px;
+    }
+
+    .wordmark {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(4rem, 11vw, 9.5rem);
+      letter-spacing: -.05em;
+      color: var(--ink);
+      line-height: .85;
+      white-space: nowrap;
+      margin: 0;
+      display: block;
+      transform: translateY(8%);
+    }
+
+    .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: .04em;
+    }
+
+    /* Floating WhatsApp */
+    .float-cta {
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      z-index: 60;
+      background: var(--ink);
+      color: var(--bg) !important;
+      padding: 14px 22px 14px 16px;
+      border-radius: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .84rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      transition: transform .3s var(--ease), background .3s var(--ease);
+    }
+
+    .float-cta:hover {
+      background: var(--accent);
+      transform: translateY(-2px)
+    }
+
+    .float-cta .wa-ic {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #25D366;
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+
+    .float-cta .wa-ic svg {
+      width: 16px;
+      height: 16px;
+      fill: #fff
+    }
+
+    .float-cta::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 4px;
+      background: rgba(37, 211, 102, .18);
+      z-index: -1;
+      animation: waPulse 2.4s ease-out infinite;
+    }
+
+    @keyframes waPulse {
+      0% {
+        transform: scale(.96);
+        opacity: .6
+      }
+
+      70% {
+        transform: scale(1.08);
+        opacity: 0
+      }
+
+      100% {
+        transform: scale(1.08);
+        opacity: 0
+      }
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* Responsive */
+    @media (max-width:1100px) {
+      .reviews-layout {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+
+      .reviews-layout .section-head {
+        position: static
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .event-card:nth-child(1) {
+        grid-row: auto
+      }
+
+      .event-card:nth-child(2),
+      .event-card:nth-child(3) {
+        margin-top: 0
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media (max-width:980px) {
+      .container {
+        padding: 0 28px
+      }
+
+      .hero {
+        padding: 140px 0 70px
+      }
+
+      .hero-foot {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        align-items: flex-start;
+        margin-top: 56px
+      }
+
+      .hero-cta {
+        justify-content: flex-start
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 24px;
+        margin-top: 72px
+      }
+
+      .hero-title {
+        margin-top: 48px;
+        max-width: none
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px
+      }
+
+      .about-side {
+        position: static;
+        padding-top: 20px
+      }
+
+      .about-quote-block {
+        padding-top: 32px;
+        border-top: 1px solid var(--line)
+      }
+
+      .svc-panel.active {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+
+      .svc-info {
+        position: static
+      }
+
+      .svc-list {
+        grid-template-columns: 1fr
+      }
+
+      .svc-head {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .svc-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none
+      }
+
+      .svc-tabs::-webkit-scrollbar {
+        display: none
+      }
+
+      .svc-tab {
+        flex-shrink: 0;
+        padding-right: 24px;
+        margin-right: 24px
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px
+      }
+
+      .review {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .review-meta {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 0
+      }
+
+      .review-body p {
+        font-size: 1.15rem
+      }
+
+      .member {
+        flex: 0 0 calc((100% - 64px) / 3)
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 56px
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0
+      }
+
+      section {
+        padding: 100px 0
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 20px 28px
+      }
+
+      .menu.open {
+        display: flex
+      }
+
+      .menu a {
+        padding: 16px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--line);
+        font-size: 1rem
+      }
+
+      .menu a:last-child {
+        border-bottom: none
+      }
+
+      .burger {
+        display: inline-flex
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr
+      }
+
+      .pillar:nth-child(odd),
+      .pillar:nth-child(even) {
+        padding-left: 0;
+        padding-right: 0;
+        border-right: none
+      }
+
+      .pillar:not(:last-child) {
+        border-bottom: 1px solid var(--line)
+      }
+
+      .brands-head {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .brands-head .b-side {
+        text-align: left
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 60px
+      }
+
+      footer {
+        padding-top: 90px;
+        margin-top: 90px
+      }
+    }
+
+    @media (max-width:640px) {
+      .container {
+        padding: 0 22px
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+
+      .member {
+        flex: 0 0 calc((100% - 32px) / 2)
+      }
+
+      .member:nth-child(even) {
+        margin-top: 0
+      }
+
+      .team-head {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+
+      h1 {
+        font-size: 2.8rem
+      }
+
+      .hero-title {
+        font-size: clamp(2.4rem, 11vw, 3.6rem)
+      }
+
+      .hero-top {
+        padding-bottom: 32px
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+        margin-top: 60px
+      }
+
+      .meta-item .num {
+        font-size: 2rem
+      }
+
+      .float-cta {
+        padding: 12px 18px;
+        font-size: .78rem
+      }
+
+      .contact-info li {
+        grid-template-columns: 1fr;
+        gap: 6px
+      }
+
+      .review-foot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .wordmark {
+        font-size: clamp(3rem, 18vw, 7rem)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Aristizabal Plata">
+        <img src="AP_sin%20fondo_2.png" alt="Aristizabal Plata" />
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#about">Quiénes somos</a>
+        <a href="#services">Servicios</a>
+        <a href="#brands">Marcas</a>
+        <a href="#events">Eventos</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#team">Equipo</a>
+        <a href="#contact" class="btn">Contacto</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner reveal">
+        <div class="hero-top">
+          <span class="eyebrow">Firma jurídica & empresarial</span>
+          <span class="hero-loc">Pereira · Colombia · Est. 2026</span>
+        </div>
+        <h1 class="hero-title">Arquitectura jurídica <span class="it">&amp;</span> estratégica para empresas que <span
+            class="it">crecen</span>.</h1>
+        <div class="hero-foot">
+          <p class="hero-sub">Integramos derecho, estrategia, organización y tecnología para que su empresa opere con
+            seguridad, estructura y visión internacional.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Agendar consulta <span class="arr">↗</span></a>
+            <a href="#services" class="btn btn-ghost">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="num">04</div>
+            <div class="lab">Áreas integradas</div>
+          </div>
+          <div class="meta-item">
+            <div class="num">09</div>
+            <div class="lab">Profesionales</div>
+          </div>
+          <div class="meta-item">
+            <div class="num">+12</div>
+            <div class="lab">Sectores acompañados</div>
+          </div>
+          <div class="meta-item">
+            <div class="num">∞</div>
+            <div class="lab">Visión internacional</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Quiénes somos</span>
+        <h2 style="margin-top:24px">Una firma diseñada para acompañar decisiones empresariales de fondo.</h2>
+        <p style="margin-top:28px;max-width:480px">No somos solo una oficina legal tradicional. Somos un aliado
+          estratégico que integra derecho, organización y tecnología para empresas que necesitan crecer con orden y
+          proyección.</p>
+        <div class="about-pillars">
+          <div class="pillar"><span class="n">01 — Estrategia</span>
+            <h4>Visión y rumbo</h4>
+            <p>Planeación estratégica, OKR y dirección de proyectos.</p>
+          </div>
+          <div class="pillar"><span class="n">02 — Derecho</span>
+            <h4>Seguridad jurídica</h4>
+            <p>Contratos, marca, datos y gestión humana integral.</p>
+          </div>
+          <div class="pillar"><span class="n">03 — Organización</span>
+            <h4>Estructura</h4>
+            <p>Manuales, roles y diseño de capacidad operativa.</p>
+          </div>
+          <div class="pillar"><span class="n">04 — Internacional</span>
+            <h4>Expansión</h4>
+            <p>Mercados, alianzas y arquitectura para crecer afuera.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="about-side reveal">
+        <div class="about-quote-block">
+          <blockquote>Donde el derecho se encuentra con la estrategia, las decisiones empresariales toman forma.
+          </blockquote>
+          <div class="sig">— Filosofía de la firma</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="svc-head reveal">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Portafolio</span>
+          <h2>Cuatro áreas integradas<br />en una sola firma.</h2>
+          <p>Cada área opera con autonomía técnica y diálogo permanente entre disciplinas. Así garantizamos respuestas
+            completas, no fragmentadas.</p>
+        </div>
+      </div>
+
+      <div class="svc-tabs reveal" role="tablist">
+        <button class="svc-tab active" data-tab="0"><span class="tnum">01</span> Jurídico empresarial</button>
+        <button class="svc-tab" data-tab="1"><span class="tnum">02</span> Estrategia y organización</button>
+        <button class="svc-tab" data-tab="2"><span class="tnum">03</span> Transformación digital</button>
+        <button class="svc-tab" data-tab="3"><span class="tnum">04</span> Internacionalización</button>
+      </div>
+
+      <div class="svc-panels reveal">
+        <div class="svc-panel active">
+          <div class="svc-info">
+            <div class="svc-num">Área 01</div>
+            <h3>Jurídico empresarial</h3>
+            <p>Soporte legal integral para la operación, las personas y los activos de la compañía.</p>
+          </div>
+          <ul class="svc-list">
+            <li>Contratos laborales, civiles, comerciales e internacionales</li>
+            <li>Gestión humana</li>
+            <li>Seguridad y salud en el trabajo</li>
+            <li>Reglamento interno</li>
+            <li>Propiedad intelectual</li>
+            <li>Tratamiento de datos</li>
+            <li>Registro de marca</li>
+            <li>Gestión de cartera</li>
+            <li>Negociaciones, conciliaciones y demandas</li>
+            <li>Representación laboral y civil</li>
+            <li>Capacitaciones</li>
+          </ul>
+        </div>
+        <div class="svc-panel">
+          <div class="svc-info">
+            <div class="svc-num">Área 02</div>
+            <h3>Estrategia y organización</h3>
+            <p>Diseñamos la estructura, los procesos y el rumbo que la compañía necesita para escalar.</p>
+          </div>
+          <ul class="svc-list">
+            <li>Estructura organizacional</li>
+            <li>Definición de roles</li>
+            <li>Manuales de funciones y procedimientos</li>
+            <li>Análisis de capacidades</li>
+            <li>Gestión del cambio</li>
+            <li>Objetivos mediante OKR</li>
+            <li>Auditoría de capacidad instalada</li>
+            <li>Gestión y ejecución de proyectos</li>
+            <li>Planeación estratégica</li>
+            <li>Marketing</li>
+            <li>Análisis financiero</li>
+            <li>Plan de negocio</li>
+          </ul>
+        </div>
+        <div class="svc-panel">
+          <div class="svc-info">
+            <div class="svc-num">Área 03</div>
+            <h3>Transformación digital</h3>
+            <p>Llevamos la operación a un ecosistema digital con automatización y datos para decidir mejor.</p>
+          </div>
+          <ul class="svc-list">
+            <li>Automatización inteligente de procesos</li>
+            <li>Ecosistema digital y canales de conversión</li>
+            <li>Desarrollo de plataformas web</li>
+            <li>Aplicaciones móviles</li>
+            <li>Ingeniería de software</li>
+            <li>Integración de herramientas para toma de decisiones</li>
+          </ul>
+        </div>
+        <div class="svc-panel">
+          <div class="svc-info">
+            <div class="svc-num">Área 04</div>
+            <h3>Internacionalización</h3>
+            <p>Estructuramos la salida al exterior con visión legal, comercial y cultural.</p>
+          </div>
+          <ul class="svc-list">
+            <li>Planes de internacionalización</li>
+            <li>Análisis de riesgo y oportunidades</li>
+            <li>Viabilidad de exportación e inversión</li>
+            <li>Análisis de mercado internacional</li>
+            <li>Propiedad intelectual internacional</li>
+            <li>Resolución de disputas internacionales</li>
+            <li>Contratos internacionales</li>
+            <li>Redes y alianzas</li>
+            <li>Gestión intercultural</li>
+            <li>Búsqueda de financiación internacional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="brands" id="brands">
+    <div class="container">
+      <div class="brands-head reveal">
+        <div>
+          <span class="eyebrow">Confianza</span>
+          <h2 style="margin-top:14px">Marcas y Aliados</h2>
+        </div>
+        <div class="b-side">Acompañamos a empresas y organizaciones de distintos sectores con criterio jurídico y mirada
+          estratégica.</div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="track" id="track">
+        <!-- generated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Eventos</span>
+        <h2 style="color:var(--bg)">Presencia institucional y participaciones.</h2>
+        <p>Espacios donde la firma comparte experiencia, construye redes y aporta a la conversación empresarial.</p>
+      </div>
+      <div class="events-grid">
+        <article class="event-card reveal">
+          <div class="event-img"></div>
+          <div class="event-body">
+            <div class="event-meta">2026 · Pereira</div>
+            <h3>Foro empresarial — Estructura para crecer</h3>
+            <p>Conversación sobre arquitectura jurídica y organizacional para compañías en expansión.</p>
+          </div>
+        </article>
+        <article class="event-card reveal">
+          <div class="event-img alt1"></div>
+          <div class="event-body">
+            <div class="event-meta">2025 · Bogotá</div>
+            <h3>Encuentro de internacionalización</h3>
+            <p>Panel sobre acceso a mercados, contratos internacionales y propiedad intelectual.</p>
+          </div>
+        </article>
+        <article class="event-card reveal">
+          <div class="event-img alt2"></div>
+          <div class="event-body">
+            <div class="event-meta">2025 · Por confirmar</div>
+            <h3>Taller de transformación digital</h3>
+            <p>Automatización, datos y ecosistemas digitales aplicados al sector empresarial.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container reviews-layout">
+      <div class="section-head reveal">
+        <span class="eyebrow">Reseñas Google</span>
+        <h2 style="margin-top:24px">Lo que dicen<br />quienes nos<br />han confiado.</h2>
+        <p>Testimonios reales de empresas y organizaciones acompañadas por la firma.</p>
+      </div>
+      <div class="reviews-stack">
+        <article class="review reveal">
+          <div class="review-meta">
+            <div class="stars">★★★★★</div>
+            <div class="src">Reseña 01</div>
+          </div>
+          <div class="review-body">
+            <p>“Acompañamiento serio, claro y estratégico. Resolvieron asuntos legales y, además, nos ayudaron a ordenar
+              la operación.”</p>
+            <div class="review-foot">
+              <div class="reviewer">
+                <div class="ravatar">C</div>
+                <div>
+                  <div class="nm">Cliente verificado</div>
+                  <div class="role">Sector servicios</div>
+                </div>
+              </div>
+              <div class="gtag"><span class="gdot"><i></i><i></i><i></i><i></i></span>Google</div>
+            </div>
+          </div>
+        </article>
+        <article class="review reveal">
+          <div class="review-meta">
+            <div class="stars">★★★★★</div>
+            <div class="src">Reseña 02</div>
+          </div>
+          <div class="review-body">
+            <p>“Nos apoyaron en internacionalización con un nivel técnico y humano muy alto. Sentimos respaldo en cada
+              decisión.”</p>
+            <div class="review-foot">
+              <div class="reviewer">
+                <div class="ravatar">E</div>
+                <div>
+                  <div class="nm">Empresa cliente</div>
+                  <div class="role">Comercio exterior</div>
+                </div>
+              </div>
+              <div class="gtag"><span class="gdot"><i></i><i></i><i></i><i></i></span>Google</div>
+            </div>
+          </div>
+        </article>
+        <article class="review reveal">
+          <div class="review-meta">
+            <div class="stars">★★★★★</div>
+            <div class="src">Reseña 03</div>
+          </div>
+          <div class="review-body">
+            <p>“Más que abogados, son aliados estratégicos. La transformación digital de nuestros procesos cambió la
+              forma de operar.”</p>
+            <div class="review-foot">
+              <div class="reviewer">
+                <div class="ravatar">P</div>
+                <div>
+                  <div class="nm">Pyme cliente</div>
+                  <div class="role">Industria</div>
+                </div>
+              </div>
+              <div class="gtag"><span class="gdot"><i></i><i></i><i></i><i></i></span>Google</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="team-head reveal">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Equipo</span>
+          <h2 style="margin-top:24px">Profesionales detrás<br />de cada decisión.</h2>
+          <p>Un equipo multidisciplinar que combina experiencia jurídica, visión estratégica y mirada internacional.</p>
+        </div>
+        <div class="team-nav">
+          <button id="teamPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.4">
+              <path d="M15 6l-6 6 6 6" />
+            </svg></button>
+          <button id="teamNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.4">
+              <path d="M9 6l6 6-6 6" />
+            </svg></button>
+        </div>
+      </div>
+
+      <div class="team-track-wrap reveal">
+        <div class="team-track" id="teamTrack">
+          <article class="member">
+            <div class="member-photo"><span class="member-num">01</span><img src="Sayal.png" alt="Sayal" />
+              <div class="member-overlay">Internacionalización y análisis de mercados.</div>
+            </div>
+            <div class="member-body">
+              <h3>Sayal</h3>
+              <div class="member-role">Internacional</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">02</span><img src="Alejandra%20.jpeg" alt="Alejandra" />
+              <div class="member-overlay">Acompañamiento jurídico y empresarial con enfoque integral.</div>
+            </div>
+            <div class="member-body">
+              <h3>Alejandra</h3>
+              <div class="member-role">Jurídico empresarial</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">03</span><img src="Edna%20.jpeg" alt="Edna" />
+              <div class="member-overlay">Soporte estratégico y operativo a clientes de la firma.</div>
+            </div>
+            <div class="member-body">
+              <h3>Edna</h3>
+              <div class="member-role">Estrategia</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">04</span><img src="Esteban.jpeg" alt="Esteban" />
+              <div class="member-overlay">Estructura organizacional y proyectos empresariales.</div>
+            </div>
+            <div class="member-body">
+              <h3>Esteban</h3>
+              <div class="member-role">Organización</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">05</span><img src="Jaime.png" alt="Jaime" />
+              <div class="member-overlay">Dirección y arquitectura jurídica de la firma.</div>
+            </div>
+            <div class="member-body">
+              <h3>Jaime</h3>
+              <div class="member-role">Dirección</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">06</span><img src="Joha.jpeg" alt="Joha" />
+              <div class="member-overlay">Gestión de procesos y atención a clientes corporativos.</div>
+            </div>
+            <div class="member-body">
+              <h3>Joha</h3>
+              <div class="member-role">Procesos</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">07</span><img src="Karol.png" alt="Karol" />
+              <div class="member-overlay">Acompañamiento legal y soporte en proyectos.</div>
+            </div>
+            <div class="member-body">
+              <h3>Karol</h3>
+              <div class="member-role">Jurídico</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">08</span><img src="Migue.jpeg" alt="Migue" />
+              <div class="member-overlay">Transformación digital y desarrollo de soluciones.</div>
+            </div>
+            <div class="member-body">
+              <h3>Migue</h3>
+              <div class="member-role">Transformación digital</div>
+            </div>
+          </article>
+          <article class="member">
+            <div class="member-photo"><span class="member-num">09</span><img src="Tatiana.png" alt="Tatiana" />
+              <div class="member-overlay">Planeación estratégica y gestión de proyectos.</div>
+            </div>
+            <div class="member-body">
+              <h3>Tatiana</h3>
+              <div class="member-role">Planeación</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-head reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2>Hablemos del próximo paso de su empresa.</h2>
+        <p>Cuéntenos su caso y le respondemos con una propuesta clara, directa y orientada a resultados.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <ul>
+            <li><span class="lab">Correo</span><span class="val">contacto@aristizabalplata.com</span></li>
+            <li><span class="lab">Teléfono</span><span class="val">+57 · por confirmar</span></li>
+            <li><span class="lab">Ciudad</span><span class="val">Pereira · Colombia</span></li>
+            <li><span class="lab">Horario</span><span class="val">Lun – Vie · 8:00 – 18:00</span></li>
+          </ul>
+        </div>
+        <form class="form reveal"
+          onsubmit="event.preventDefault();this.querySelector('button').innerHTML='Mensaje enviado ✓'">
+          <div class="form-row">
+            <div class="field"><label for="n">Nombre</label><input id="n" placeholder="Su nombre" required /></div>
+            <div class="field"><label for="e">Correo</label><input id="e" type="email" placeholder="email@empresa.com"
+                required /></div>
+          </div>
+          <div class="field"><label for="c">Empresa</label><input id="c" placeholder="Nombre de su compañía" /></div>
+          <div class="field"><label for="m">Mensaje</label><textarea id="m"
+              placeholder="Cuéntenos brevemente su necesidad" required></textarea></div>
+          <button class="btn" type="submit">Enviar mensaje <span class="arr">↗</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid reveal">
+        <div class="foot-col foot-intro">
+          <img src="AP_sin%20fondo_2.png" alt="Aristizabal Plata" class="foot-mini-logo" />
+          <p>Arquitectura jurídica y estratégica para empresas que crecen con seguridad y proyección internacional.</p>
+        </div>
+        <div class="foot-col">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="#about">Quiénes somos</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#brands">Marcas</a></li>
+            <li><a href="#team">Equipo</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Áreas</h5>
+          <ul>
+            <li><a href="#services">Jurídico empresarial</a></li>
+            <li><a href="#services">Estrategia</a></li>
+            <li><a href="#services">Transformación digital</a></li>
+            <li><a href="#services">Internacional</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="mailto:contacto@aristizabalplata.com">contacto@aristizabalplata.com</a></li>
+            <li><a href="#contact">Pereira · Colombia</a></li>
+            <li><a href="#contact">Lun – Vie · 8:00 – 18:00</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wordmark-wrap reveal" aria-hidden="true">
+        <span class="wordmark">Aristizabal&nbsp;Plata.</span>
+      </div>
+      <div class="foot-bottom">
+        <div>© 2026 Aristizabal Plata. Todos los derechos reservados.</div>
+        <div>Arquitectura jurídica · Estrategia · Organización · Internacional</div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-cta"
+    href="https://wa.me/?text=Hola%20Aristizabal%20Plata%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta."
+    target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="wa-ic">
+      <svg viewBox="0 0 32 32" fill="#25D366" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M16.003 3C9.374 3 4 8.373 4 15a11.94 11.94 0 0 0 1.642 6.06L4 29l8.184-1.6A12 12 0 0 0 16.003 28C22.63 28 28 22.628 28 16S22.63 3 16.003 3Zm0 21.8a9.79 9.79 0 0 1-5.01-1.378l-.36-.214-4.86.95.97-4.74-.234-.376A9.84 9.84 0 0 1 6.2 16c0-5.41 4.396-9.8 9.803-9.8s9.797 4.39 9.797 9.8-4.39 9.8-9.797 9.8Zm5.388-7.34c-.295-.148-1.748-.862-2.018-.96-.27-.099-.467-.148-.665.148s-.762.96-.935 1.158c-.172.198-.345.222-.64.074-.295-.148-1.247-.46-2.376-1.467-.879-.784-1.473-1.752-1.646-2.048-.172-.296-.018-.456.13-.604.133-.132.295-.345.443-.518.148-.173.197-.296.296-.494.099-.198.05-.37-.025-.518-.074-.148-.665-1.605-.911-2.197-.24-.578-.485-.5-.665-.51-.172-.008-.37-.01-.567-.01a1.09 1.09 0 0 0-.788.37c-.27.296-1.034 1.01-1.034 2.467 0 1.456 1.058 2.866 1.205 3.064.148.198 2.084 3.18 5.05 4.46.706.305 1.256.488 1.685.625.708.225 1.353.193 1.862.117.568-.085 1.748-.715 1.995-1.405.245-.69.245-1.282.172-1.405-.073-.123-.27-.198-.566-.346Z" />
+      </svg>
+    </span>
+    ¿Hablamos?
+  </a>
+
+  <script>
+    // Header scroll state
+    const header = document.querySelector('header.site');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20) });
+
+    // Burger
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    burger.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    // Service tabs
+    const tabs = document.querySelectorAll('.svc-tab');
+    const panels = document.querySelectorAll('.svc-panel');
+    tabs.forEach((t, i) => t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      panels.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      panels[i].classList.add('active');
+    }));
+
+    // Brand marquee — real logo images
+    const brandImgs = [
+      { src: 'logos_marcas.png', alt: 'Marca aliada 1' },
+      { src: 'logos_marcas1.png', alt: 'Marca aliada 2' },
+      { src: 'logos_marcas2.png', alt: 'Marca aliada 3' },
+      { src: 'logos_marcas3.png', alt: 'Marca aliada 4' },
+      { src: 'logos_marcas.png', alt: 'Marca aliada 1' },
+      { src: 'logos_marcas1.png', alt: 'Marca aliada 2' },
+      { src: 'logos_marcas2.png', alt: 'Marca aliada 3' },
+      { src: 'logos_marcas3.png', alt: 'Marca aliada 4' },
+    ];
+    const track = document.getElementById('track');
+    const html = brandImgs.map(b => `<div class="logo-item"><img src="${b.src}" alt="${b.alt}"/></div>`).join('');
+    track.innerHTML = html + html;
+
+    // Team carousel
+    const teamTrack = document.getElementById('teamTrack');
+    const teamPrev = document.getElementById('teamPrev');
+    const teamNext = document.getElementById('teamNext');
+    let teamIdx = 0;
+    function perView() {
+      if (window.innerWidth <= 640) return 2;
+      if (window.innerWidth <= 980) return 3;
+      return 4;
+    }
+    function teamUpdate() {
+      const total = teamTrack.children.length;
+      const pv = perView();
+      const max = Math.max(0, total - pv);
+      if (teamIdx > max) teamIdx = max;
+      const card = teamTrack.children[0];
+      const gap = parseFloat(getComputedStyle(teamTrack).gap) || 20;
+      const step = card.getBoundingClientRect().width + gap;
+      teamTrack.style.transform = `translateX(${-teamIdx * step}px)`;
+      teamPrev.disabled = teamIdx === 0;
+      teamNext.disabled = teamIdx >= max;
+    }
+    teamPrev.addEventListener('click', () => { teamIdx = Math.max(0, teamIdx - 1); teamUpdate() });
+    teamNext.addEventListener('click', () => { teamIdx += 1; teamUpdate() });
+    window.addEventListener('resize', teamUpdate);
+    setTimeout(teamUpdate, 50);
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } })
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
