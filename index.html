@@ -2309,17 +2309,16 @@
             <li><span class="lab">Horario</span><span class="val">Lun – Vie · 8:00 – 18:00</span></li>
           </ul>
         </div>
-        <form class="form reveal"
-          onsubmit="event.preventDefault();this.querySelector('button').innerHTML='Mensaje enviado ✓'">
+        <form class="form reveal" id="contactForm">
+          <input type="hidden" name="access_key" value="00f0d8c3-8f1a-419a-90a8-9422911f4672" />
+          <input type="hidden" name="subject" value="Nuevo contacto — Aristizabal Plata" />
           <div class="form-row">
-            <div class="field"><label for="n">Nombre</label><input id="n" placeholder="Su nombre" required /></div>
-            <div class="field"><label for="e">Correo</label><input id="e" type="email" placeholder="email@empresa.com"
-                required /></div>
+            <div class="field"><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Su nombre" required /></div>
+            <div class="field"><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="email@empresa.com" required /></div>
           </div>
-          <div class="field"><label for="c">Empresa</label><input id="c" placeholder="Nombre de su compañía" /></div>
-          <div class="field"><label for="m">Mensaje</label><textarea id="m"
-              placeholder="Cuéntenos brevemente su necesidad" required></textarea></div>
-          <button class="btn" type="submit">Enviar mensaje <span class="arr">↗</span></button>
+          <div class="field"><label for="c">Empresa</label><input id="c" name="empresa" placeholder="Nombre de su compañía" /></div>
+          <div class="field"><label for="m">Mensaje</label><textarea id="m" name="mensaje" placeholder="Cuéntenos brevemente su necesidad" required></textarea></div>
+          <button class="btn" type="submit" id="submitBtn">Enviar mensaje <span class="arr">↗</span></button>
         </form>
       </div>
     </div>
@@ -2443,6 +2442,29 @@
     teamNext.addEventListener('click', () => { teamIdx += 1; teamUpdate() });
     window.addEventListener('resize', teamUpdate);
     setTimeout(teamUpdate, 50);
+
+    // Contact form — Web3Forms
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = 'Enviando… <span class="arr">↗</span>';
+      btn.disabled = true;
+      const data = new FormData(this);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          btn.innerHTML = 'Mensaje enviado ✓';
+          this.reset();
+        } else {
+          btn.innerHTML = 'Error — intente de nuevo';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.innerHTML = 'Error — intente de nuevo';
+        btn.disabled = false;
+      }
+    });
 
     // Reveal on scroll
     const io = new IntersectionObserver(es => {
