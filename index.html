@@ -2310,8 +2310,6 @@
           </ul>
         </div>
         <form class="form reveal" id="contactForm">
-          <input type="hidden" name="access_key" value="00f0d8c3-8f1a-419a-90a8-9422911f4672" />
-          <input type="hidden" name="subject" value="Nuevo contacto — Aristizabal Plata" />
           <div class="form-row">
             <div class="field"><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Su nombre" required /></div>
             <div class="field"><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="email@empresa.com" required /></div>
@@ -2444,25 +2442,30 @@
     setTimeout(teamUpdate, 50);
 
     // Contact form — Web3Forms
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      btn.innerHTML = 'Enviando… <span class="arr">↗</span>';
-      btn.disabled = true;
-      const data = new FormData(this);
+      const originalText = submitBtn.innerHTML;
+      const formData = new FormData(contactForm);
+      formData.append('access_key', '00f0d8c3-8f1a-419a-90a8-9422911f4672');
+      submitBtn.innerHTML = 'Enviando… <span class="arr">↗</span>';
+      submitBtn.disabled = true;
       try {
-        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-        const json = await res.json();
-        if (json.success) {
-          btn.innerHTML = 'Mensaje enviado ✓';
-          this.reset();
+        const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+        const data = await response.json();
+        if (response.ok) {
+          submitBtn.innerHTML = 'Mensaje enviado ✓';
+          contactForm.reset();
         } else {
-          btn.innerHTML = 'Error — intente de nuevo';
-          btn.disabled = false;
+          alert('Error: ' + data.message);
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
         }
-      } catch {
-        btn.innerHTML = 'Error — intente de nuevo';
-        btn.disabled = false;
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
       }
     });
 
