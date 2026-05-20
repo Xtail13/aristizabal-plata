@@ -1,0 +1,199 @@
+{
+  "nav": {
+    "about": "Quiénes somos",
+    "services": "Servicios",
+    "internationalization": "Internacionalización",
+    "team": "Equipo",
+    "clients": "Clientes",
+    "contact": "Contacto",
+    "cta": "Agendar diagnóstico",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "eyebrow": "Firma consultora · Pereira · Colombia",
+    "title": "Elevamos su empresa al escenario global",
+    "subtitle": "Transformamos desafíos complejos en ventajas estratégicas mediante consultoría de alto nivel en planeación, blindaje jurídico e internacionalización. Mitigamos su riesgo; garantizamos su escalabilidad.",
+    "ctaPrimary": "Agendar diagnóstico",
+    "ctaSecondary": "Ver servicios",
+    "stats": {
+      "areas": "Áreas integradas",
+      "team": "Profesionales",
+      "sectors": "Sectores acompañados",
+      "vision": "Proyección internacional"
+    }
+  },
+  "pillars": {
+    "eyebrow": "Propuesta de valor",
+    "title": "Aliados en su expansión, expertos en su seguridad",
+    "subtitle": "Impulsamos la competitividad de las organizaciones con un enfoque multidisciplinario.",
+    "items": {
+      "strategy": {
+        "title": "Estrategia avanzada",
+        "text": "Planeación diseñada para el crecimiento real."
+      },
+      "legal": {
+        "title": "Arquitectura jurídica",
+        "text": "Blindaje y mitigación de riesgos globales."
+      },
+      "international": {
+        "title": "Internacionalización",
+        "text": "Despliegue efectivo en mercados externos."
+      },
+      "digital": {
+        "title": "Transformación digital",
+        "text": "Automatización y eficiencia."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Quiénes somos",
+    "title": "Una firma consultora diseñada para decisiones empresariales de fondo",
+    "body": "Somos una firma consultora de alto nivel integrada por especialistas multidisciplinarios, enfocada en potenciar la competitividad de las organizaciones en mercados nacionales e internacionales. En Aristizabal Plata transformamos desafíos complejos en ventajas estratégicas a través de un ecosistema de servicios que integra la arquitectura jurídica, la planeación estratégica avanzada y el despliegue de procesos de internacionalización.",
+    "quote": "Nuestro compromiso es mitigar el riesgo y garantizar la escalabilidad y permanencia de nuestros clientes, combinando el rigor técnico con una visión global de mercado.",
+    "signature": "— Filosofía de la firma"
+  },
+  "services": {
+    "eyebrow": "Portafolio",
+    "title": "Cuatro áreas integradas en una sola firma",
+    "subtitle": "Cada área opera con autonomía técnica y diálogo permanente entre disciplinas. Garantizamos respuestas completas, no fragmentadas.",
+    "areaLabel": "Área",
+    "showMore": "servicios más"
+  },
+  "clients": {
+    "eyebrow": "Confianza",
+    "title": "Clientes que crecen con nosotros",
+    "subtitle": "Acompañamos a empresas y organizaciones de distintos sectores con criterio jurídico y mirada estratégica."
+  },
+  "allies": {
+    "eyebrow": "Red institucional",
+    "title": "Aliados estratégicos",
+    "subtitle": "Trabajamos junto a firmas y aliados que amplían nuestra capacidad de respuesta en múltiples áreas.",
+    "tagline": "Alianzas que potencian resultados y generan valor sostenible.",
+    "taglineBold": "potencian resultados",
+    "items": {
+      "0": {
+        "field": "Aliado jurídico",
+        "contribution": "Amplía la capacidad de respuesta en litigio y asuntos legales especializados."
+      },
+      "1": {
+        "field": "Aliado en crecimiento",
+        "contribution": "Suma capacidad en estrategia comercial y desarrollo de negocio."
+      },
+      "2": {
+        "field": "Aliado en movilidad",
+        "contribution": "Refuerza los procesos de internacionalización y acompañamiento migratorio."
+      }
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Documento institucional",
+    "title": "Conozca el portafolio completo de la firma",
+    "subtitle": "Descargue el portafolio 2026 con el detalle de servicios, equipo y enfoque estratégico.",
+    "cta": "Descargar portafolio"
+  },
+  "events": {
+    "eyebrow": "Eventos",
+    "title": "Presencia institucional y participaciones",
+    "subtitle": "Espacios donde la firma comparte experiencia, construye redes y aporta a la conversación empresarial.",
+    "items": {
+      "0": { "meta": "2026 · Pereira", "title": "Foro empresarial — Estructura para crecer", "text": "Conversación sobre arquitectura jurídica y organizacional para compañías en expansión." },
+      "1": { "meta": "2025 · Bogotá", "title": "Encuentro de internacionalización", "text": "Panel sobre acceso a mercados, contratos internacionales y propiedad intelectual." },
+      "2": { "meta": "2025 · Por confirmar", "title": "Taller de transformación digital", "text": "Automatización, datos y ecosistemas digitales aplicados al sector empresarial." }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Casos de éxito",
+    "title": "Lo que dicen quienes nos han confiado",
+    "subtitle": "Testimonios reales de empresas y organizaciones acompañadas por la firma.",
+    "googleNote": "Reseñas verificadas en Google",
+    "items": {
+      "0": { "quote": "Acompañamiento serio, claro y estratégico. Resolvieron asuntos legales y, además, nos ayudaron a ordenar la operación.", "author": "Cliente verificado", "role": "Sector servicios" },
+      "1": { "quote": "Nos apoyaron en internacionalización con un nivel técnico y humano muy alto. Sentimos respaldo en cada decisión.", "author": "Empresa cliente", "role": "Comercio exterior" },
+      "2": { "quote": "Más que abogados, son aliados estratégicos. La transformación digital de nuestros procesos cambió la forma de operar.", "author": "Pyme cliente", "role": "Industria" }
+    }
+  },
+  "schedule": {
+    "eyebrow": "Agendamiento",
+    "title": "Reserve una sesión con la firma",
+    "subtitle": "Elija el tipo de sesión. La agenda se sincroniza con los consultores para eliminar la fricción de los correos de ida y vuelta.",
+    "diagnostico": {
+      "title": "Diagnóstico empresarial",
+      "text": "Sesión estratégica de evaluación con la dirección de estrategia.",
+      "cta": "Agendar diagnóstico"
+    },
+    "juridico": {
+      "title": "Asesoría jurídica inicial",
+      "text": "Primera consulta con la dirección jurídica empresarial.",
+      "cta": "Agendar asesoría"
+    },
+    "soon": "Disponible próximamente"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos del próximo paso de su empresa",
+    "subtitle": "Cuéntenos su caso y le respondemos con una propuesta clara, directa y orientada a resultados.",
+    "labels": {
+      "email": "Correo",
+      "phone": "Teléfono",
+      "city": "Ciudad",
+      "hours": "Horario"
+    },
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Su nombre",
+      "email": "Correo",
+      "emailPlaceholder": "email@empresa.com",
+      "phone": "Celular",
+      "phonePlaceholder": "300 000 0000",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de su compañía",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntenos brevemente su necesidad",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "Mensaje enviado ✓",
+      "error": "No se pudo enviar. Intente de nuevo."
+    }
+  },
+  "footer": {
+    "tagline": "Arquitectura jurídica y estratégica para empresas que crecen con seguridad y proyección internacional.",
+    "navTitle": "Navegación",
+    "areasTitle": "Áreas",
+    "contactTitle": "Contacto",
+    "legalTitle": "Legal",
+    "dataPolicy": "Política de tratamiento de datos",
+    "cookiePolicy": "Política de cookies",
+    "rights": "Todos los derechos reservados.",
+    "whatsapp": "¿Hablamos?"
+  },
+  "legal": {
+    "dataPolicy": {
+      "title": "Política de Tratamiento de Datos Personales",
+      "intro": "En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, Aristizabal Plata informa su política de tratamiento de datos personales.",
+      "draftNote": "Contenido en revisión legal. La versión definitiva será publicada por la firma."
+    },
+    "cookiePolicy": {
+      "title": "Política de Cookies",
+      "intro": "Este sitio utiliza cookies técnicas para su correcto funcionamiento y, opcionalmente, cookies analíticas.",
+      "draftNote": "Contenido en revisión. La versión definitiva será publicada por la firma."
+    }
+  },
+  "team": {
+    "eyebrow": "Equipo",
+    "title": "Profesionales detrás de cada decisión",
+    "subtitle": "Un equipo multidisciplinar que combina experiencia jurídica, visión estratégica y mirada internacional.",
+    "viewAll": "Ver todo el equipo",
+    "credentialsTitle": "Formación"
+  },
+  "pages": {
+    "team": { "title": "Equipo", "description": "Conozca al equipo multidisciplinario de Aristizabal Plata: dirección, consultoría jurídica, estrategia, comercio exterior e internacionalización." },
+    "services": { "title": "Servicios", "description": "Cuatro áreas integradas: jurídico empresarial, estrategia y organización, transformación digital e internacionalización." },
+    "internationalization": { "title": "Internacionalización", "description": "Estructuramos la salida al exterior de su empresa con visión legal, comercial y cultural." },
+    "contact": { "title": "Contacto", "description": "Agende un diagnóstico empresarial o una asesoría jurídica inicial con Aristizabal Plata en Pereira, Colombia." }
+  },
+  "meta": {
+    "homeTitle": "Aristizabal Plata — Consultoría estratégica, jurídica e internacional",
+    "homeDescription": "Firma consultora de alto nivel: arquitectura jurídica, planeación estratégica avanzada e internacionalización. Mitigamos su riesgo; garantizamos su escalabilidad."
+  }
+}

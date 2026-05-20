@@ -1,0 +1,199 @@
+{
+  "nav": {
+    "about": "About us",
+    "services": "Services",
+    "internationalization": "Internationalization",
+    "team": "Team",
+    "clients": "Clients",
+    "contact": "Contact",
+    "cta": "Book a diagnosis",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "Consulting firm · Pereira · Colombia",
+    "title": "We elevate your company to the global stage",
+    "subtitle": "We turn complex challenges into strategic advantages through high-level consulting in planning, legal protection and internationalization. We mitigate your risk; we guarantee your scalability.",
+    "ctaPrimary": "Book a diagnosis",
+    "ctaSecondary": "View services",
+    "stats": {
+      "areas": "Integrated areas",
+      "team": "Professionals",
+      "sectors": "Sectors served",
+      "vision": "International outlook"
+    }
+  },
+  "pillars": {
+    "eyebrow": "Value proposition",
+    "title": "Allies in your expansion, experts in your security",
+    "subtitle": "We boost organizational competitiveness with a multidisciplinary approach.",
+    "items": {
+      "strategy": {
+        "title": "Advanced strategy",
+        "text": "Planning designed for real growth."
+      },
+      "legal": {
+        "title": "Legal architecture",
+        "text": "Protection and global risk mitigation."
+      },
+      "international": {
+        "title": "Internationalization",
+        "text": "Effective deployment in foreign markets."
+      },
+      "digital": {
+        "title": "Digital transformation",
+        "text": "Automation and efficiency."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "A consulting firm built for decisions that matter",
+    "body": "We are a high-level consulting firm made up of multidisciplinary specialists, focused on boosting the competitiveness of organizations in domestic and international markets. At Aristizabal Plata we turn complex challenges into strategic advantages through a service ecosystem that integrates legal architecture, advanced strategic planning and internationalization processes.",
+    "quote": "Our commitment is to mitigate risk and guarantee the scalability and permanence of our clients, combining technical rigor with a global market vision.",
+    "signature": "— Firm philosophy"
+  },
+  "services": {
+    "eyebrow": "Portfolio",
+    "title": "Four integrated areas in a single firm",
+    "subtitle": "Each area operates with technical autonomy and permanent dialogue across disciplines. We guarantee complete answers, not fragmented ones.",
+    "areaLabel": "Area",
+    "showMore": "more services"
+  },
+  "clients": {
+    "eyebrow": "Trust",
+    "title": "Clients that grow with us",
+    "subtitle": "We support companies and organizations across sectors with legal judgment and strategic vision."
+  },
+  "allies": {
+    "eyebrow": "Institutional network",
+    "title": "Strategic allies",
+    "subtitle": "We work alongside firms and allies that extend our response capacity across multiple areas.",
+    "tagline": "Alliances that strengthen results and generate sustainable value.",
+    "taglineBold": "strengthen results",
+    "items": {
+      "0": {
+        "field": "Legal ally",
+        "contribution": "Extends response capacity in litigation and specialized legal matters."
+      },
+      "1": {
+        "field": "Growth ally",
+        "contribution": "Adds capacity in commercial strategy and business development."
+      },
+      "2": {
+        "field": "Mobility ally",
+        "contribution": "Strengthens internationalization processes and immigration support."
+      }
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Institutional document",
+    "title": "Explore the firm's full portfolio",
+    "subtitle": "Download the 2026 portfolio with detailed services, team and strategic approach.",
+    "cta": "Download portfolio"
+  },
+  "events": {
+    "eyebrow": "Events",
+    "title": "Institutional presence and participation",
+    "subtitle": "Spaces where the firm shares experience, builds networks and contributes to the business conversation.",
+    "items": {
+      "0": { "meta": "2026 · Pereira", "title": "Business forum — Structure to grow", "text": "A conversation on legal and organizational architecture for expanding companies." },
+      "1": { "meta": "2025 · Bogotá", "title": "Internationalization meeting", "text": "Panel on market access, international contracts and intellectual property." },
+      "2": { "meta": "2025 · To be confirmed", "title": "Digital transformation workshop", "text": "Automation, data and digital ecosystems applied to the business sector." }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Success stories",
+    "title": "What those who trusted us say",
+    "subtitle": "Real testimonials from companies and organizations supported by the firm.",
+    "googleNote": "Verified reviews on Google",
+    "items": {
+      "0": { "quote": "Serious, clear and strategic support. They resolved legal matters and also helped us organize operations.", "author": "Verified client", "role": "Services sector" },
+      "1": { "quote": "They supported us in internationalization with very high technical and human standards. We felt backed in every decision.", "author": "Client company", "role": "Foreign trade" },
+      "2": { "quote": "More than lawyers, they are strategic allies. The digital transformation of our processes changed how we operate.", "author": "SME client", "role": "Industry" }
+    }
+  },
+  "schedule": {
+    "eyebrow": "Scheduling",
+    "title": "Book a session with the firm",
+    "subtitle": "Choose the session type. The calendar syncs with consultants to remove the friction of back-and-forth emails.",
+    "diagnostico": {
+      "title": "Business diagnosis",
+      "text": "Strategic assessment session with the strategy direction.",
+      "cta": "Book a diagnosis"
+    },
+    "juridico": {
+      "title": "Initial legal advice",
+      "text": "First consultation with the corporate legal direction.",
+      "cta": "Book advice"
+    },
+    "soon": "Available soon"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your company's next step",
+    "subtitle": "Tell us your case and we will respond with a clear, direct, results-oriented proposal.",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "city": "City",
+      "hours": "Hours"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "email@company.com",
+      "phone": "Mobile",
+      "phonePlaceholder": "300 000 0000",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "message": "Message",
+      "messagePlaceholder": "Briefly tell us your need",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent ✓",
+      "error": "Could not send. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Legal and strategic architecture for companies that grow with security and international projection.",
+    "navTitle": "Navigation",
+    "areasTitle": "Areas",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "dataPolicy": "Data protection policy",
+    "cookiePolicy": "Cookie policy",
+    "rights": "All rights reserved.",
+    "whatsapp": "Let's talk?"
+  },
+  "legal": {
+    "dataPolicy": {
+      "title": "Personal Data Protection Policy",
+      "intro": "In compliance with Colombian Law 1581 of 2012 and Decree 1377 of 2013, Aristizabal Plata states its personal data processing policy.",
+      "draftNote": "Content under legal review. The final version will be published by the firm."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "intro": "This site uses technical cookies for proper operation and, optionally, analytics cookies.",
+      "draftNote": "Content under review. The final version will be published by the firm."
+    }
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "Professionals behind every decision",
+    "subtitle": "A multidisciplinary team combining legal expertise, strategic vision and an international outlook.",
+    "viewAll": "View the full team",
+    "credentialsTitle": "Credentials"
+  },
+  "pages": {
+    "team": { "title": "Team", "description": "Meet the multidisciplinary team at Aristizabal Plata: leadership, legal consulting, strategy, foreign trade and internationalization." },
+    "services": { "title": "Services", "description": "Four integrated areas: corporate legal, strategy and organization, digital transformation and internationalization." },
+    "internationalization": { "title": "Internationalization", "description": "We structure your company's international expansion with legal, commercial and cultural vision." },
+    "contact": { "title": "Contact", "description": "Book a business diagnosis or initial legal advice with Aristizabal Plata in Pereira, Colombia." }
+  },
+  "meta": {
+    "homeTitle": "Aristizabal Plata — Strategic, legal and international consulting",
+    "homeDescription": "High-level consulting firm: legal architecture, advanced strategic planning and internationalization. We mitigate your risk; we guarantee your scalability."
+  }
+}

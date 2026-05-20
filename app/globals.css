@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f4ef;
+  --color-bg-alt: #efece4;
+  --color-ink: #0e1620;
+  --color-ink-soft: #2b3340;
+  --color-muted: #6b7280;
+  --color-line: #dcd6c8;
+  --color-line-soft: #e6e1d4;
+  --color-navy: #0b1f33;
+  --color-navy-soft: #14304d;
+  --color-accent: #1f3a5f;
+  --color-gold: #a98a4b;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --radius: 2px;
+  --radius-lg: 8px;
+
+  --ease-premium: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02", "liga";
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+@keyframes ap-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Sistema de textura y acentos ───────────────────────────────── */
+
+/* Grano/ruido fractal. Capa pasiva, no intercepta eventos. */
+.ap-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+.ap-grain--dark {
+  opacity: 0.16;
+}
+.ap-grain--light {
+  opacity: 0.045;
+}
+
+/* Composición arquitectónica procedural sobre navy.
+   Verticales finas + halo de luz: lee como espacio institucional,
+   no como placeholder. Reemplazable por foto duotono real. */
+.ap-architecture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(
+      ellipse 70% 60% at 78% 8%,
+      rgba(169, 138, 75, 0.16) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 90% 70% at 12% 100%,
+      rgba(20, 48, 77, 0.7) 0%,
+      transparent 65%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 7.2%,
+      rgba(255, 255, 255, 0.028) 7.2%,
+      rgba(255, 255, 255, 0.028) calc(7.2% + 1px),
+      transparent calc(7.2% + 1px),
+      transparent 14.4%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(11, 31, 51, 0) 55%,
+      rgba(11, 31, 51, 0.55) 100%
+    );
+}
+
+/* Filete dorado estructural reutilizable. */
+.ap-rule-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(169, 138, 75, 0.55) 18%,
+    rgba(169, 138, 75, 0.55) 82%,
+    transparent
+  );
+}
+
+/* Tratamiento duotono navy para fotografía. Coherencia editorial
+   entre todas las imágenes de contexto (no afecta retratos del equipo). */
+.ap-duotone {
+  filter: grayscale(1) contrast(1.05) brightness(0.92);
+}
+.ap-duotone-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(11, 31, 51, 0.78),
+    rgba(20, 48, 77, 0.55)
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.ap-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s var(--ease-premium),
+    transform 0.9s var(--ease-premium);
+}
+
+.ap-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ap-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .ap-marquee-track {
+    animation: none !important;
+  }
+}
