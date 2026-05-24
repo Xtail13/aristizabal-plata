@@ -41,12 +41,12 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/brand/ap-logo.png"
+            src="/brand/ap-logo-header.png"
             alt="Aristizabal Plata"
-            width={150}
-            height={56}
+            width={96}
+            height={136}
             priority
-            className="h-12 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </Link>
 
