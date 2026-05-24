@@ -35,7 +35,6 @@ export function StrategicAllies() {
 
   return (
     <section className="relative overflow-hidden bg-bg py-16 sm:py-24 lg:py-28">
-      <span className="ap-architecture" aria-hidden />
       <Container className="relative">
         <SectionHeading
           eyebrow={t("eyebrow")}
