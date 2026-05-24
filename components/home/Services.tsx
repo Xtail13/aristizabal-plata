@@ -36,16 +36,16 @@ export function Services({ hideHeading = false }: { hideHeading?: boolean }) {
           />
         )}
 
-        <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 border-t border-line sm:mt-14">
+        <div className="mt-8 grid grid-cols-2 gap-2 border-t border-line pt-4 sm:mt-14 sm:flex sm:flex-wrap sm:gap-x-7 sm:gap-y-2 sm:pt-0">
           {services.map((s, i) => (
             <button
               key={s.id}
               type="button"
               onClick={() => handleTabChange(i)}
-              className={`flex items-center gap-3 border-t py-5 text-sm font-medium transition-colors ${
+              className={`flex min-h-16 items-center gap-2 rounded-[2px] border px-3 py-3 text-left text-sm font-medium leading-snug transition-colors sm:min-h-0 sm:gap-3 sm:border-x-0 sm:border-b-0 sm:border-t sm:px-0 sm:py-5 ${
                 i === active
-                  ? "border-ink text-ink"
-                  : "border-transparent text-muted hover:text-ink"
+                  ? "border-gold bg-bg text-ink sm:border-ink sm:bg-transparent"
+                  : "border-transparent text-muted hover:text-ink sm:border-transparent"
               }`}
             >
               <span className="font-display text-xs text-gold">{s.number}</span>
@@ -54,7 +54,7 @@ export function Services({ hideHeading = false }: { hideHeading?: boolean }) {
           ))}
         </div>
 
-        <div className="grid gap-8 pt-10 sm:pt-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:pt-14">
+        <div className="grid gap-6 pt-7 sm:gap-8 sm:pt-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:pt-14">
           <div className="lg:sticky lg:top-28 lg:self-start">
             {/* Foto de guía por área. Foto final: añadir `image` por servicio en lib/services.ts */}
             <EditorialFrame
@@ -62,15 +62,15 @@ export function Services({ hideHeading = false }: { hideHeading?: boolean }) {
               alt={current.title[locale]}
               ratio="aspect-[4/3]"
               caption={`${t("areaLabel")} ${current.number}`}
-              className="mb-8"
+              className="hidden sm:block sm:mb-8"
             />
-            <div className="mb-6 text-sm uppercase tracking-[0.04em] text-muted">
+            <div className="mb-4 text-xs uppercase tracking-[0.14em] text-muted sm:mb-6 sm:text-sm sm:tracking-[0.04em]">
               {t("areaLabel")} {current.number}
             </div>
-            <h3 className="font-display text-3xl leading-tight sm:text-4xl">
+            <h3 className="font-display text-2xl leading-tight sm:text-4xl">
               {current.title[locale]}
             </h3>
-            <p className="mt-5 max-w-sm text-base leading-relaxed text-ink-soft">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-soft sm:mt-5 sm:text-base">
               {current.summary[locale]}
             </p>
           </div>
