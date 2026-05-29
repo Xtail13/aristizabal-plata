@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -38,31 +41,82 @@ function EventGallery({
   images: readonly string[];
   alt: string;
 }) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const hasMultipleImages = images.length > 1;
+
+  function goToImage(index: number) {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const nextIndex = (index + images.length) % images.length;
+    track.scrollTo({ left: track.clientWidth * nextIndex, behavior: "smooth" });
+    setActiveIndex(nextIndex);
+  }
+
+  function syncActiveImage() {
+    const track = trackRef.current;
+    if (!track) return;
+
+    setActiveIndex(Math.round(track.scrollLeft / track.clientWidth));
+  }
+
   return (
-    <div className="grid aspect-square grid-cols-2 grid-rows-2 gap-px overflow-hidden rounded-[2px] bg-white/15 md:aspect-[4/3]">
-      {images.map((src, index) => (
-        <div
-          key={src}
-          className={`relative overflow-hidden bg-navy ${
-            images.length === 1
-              ? "col-span-2 row-span-2"
-              : images.length === 2
-                ? "row-span-2"
-                : index === 0
-                  ? "row-span-2"
-                  : ""
-          }`}
-        >
-          <Image
-            src={src}
-            alt={index === 0 ? alt : ""}
-            fill
-            sizes="(max-width: 768px) 7rem, 33vw"
-            className="object-cover grayscale contrast-105 brightness-90"
-          />
-          <span className="absolute inset-0 bg-navy/25 mix-blend-multiply" />
-        </div>
-      ))}
+    <div className="group relative">
+      <div
+        ref={trackRef}
+        onScroll={syncActiveImage}
+        className="flex aspect-[16/10] snap-x snap-mandatory overflow-x-auto rounded-[2px] bg-navy [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:aspect-[4/3]"
+      >
+        {images.map((src, index) => (
+          <div
+            key={src}
+            className="relative h-full w-full shrink-0 snap-start overflow-hidden bg-navy"
+          >
+            <Image
+              src={src}
+              alt={index === 0 ? alt : ""}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {hasMultipleImages && (
+        <>
+          <button
+            type="button"
+            aria-label="Fotografía anterior"
+            onClick={() => goToImage(activeIndex - 1)}
+            className="absolute left-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-navy/75 text-lg leading-none text-white shadow-md transition-colors hover:bg-navy"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            aria-label="Fotografía siguiente"
+            onClick={() => goToImage(activeIndex + 1)}
+            className="absolute right-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-navy/75 text-lg leading-none text-white shadow-md transition-colors hover:bg-navy"
+          >
+            ›
+          </button>
+          <div
+            className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5"
+            aria-hidden
+          >
+            {images.map((src, index) => (
+              <span
+                key={src}
+                className={`h-1.5 w-1.5 rounded-full border border-white/60 ${
+                  activeIndex === index ? "bg-white" : "bg-navy/60"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -90,13 +144,13 @@ export function Events() {
               return (
                 <article
                   key={i}
-                  className="grid grid-cols-[6.5rem_1fr] gap-4 border-t border-white/15 pt-4 md:block md:border-t-0 md:pt-0"
+                  className="border-t border-white/15 pt-4 md:block md:border-t-0 md:pt-0"
                 >
                   <EventGallery
                     images={eventImages[Number(i)]}
                     alt={t(`items.${i}.title`)}
                   />
-                  <div className="min-w-0 self-center md:pt-5">
+                  <div className="min-w-0 pt-4 md:pt-5">
                     <div className="text-[0.68rem] uppercase tracking-[0.18em] text-white/50">
                       {meta}
                     </div>
