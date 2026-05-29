@@ -52,7 +52,7 @@ export function ContactForm() {
         </div>
 
         <div className="mt-10 grid gap-10 sm:mt-16 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
-          <ul className="border-t border-line">
+          <ul className="min-w-0 border-t border-line">
             {[
               { l: t("labels.email"), v: siteConfig.contactEmail },
               { l: t("labels.phone"), v: siteConfig.phone },
@@ -61,17 +61,19 @@ export function ContactForm() {
             ].map((row) => (
               <li
                 key={row.l}
-                className="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-line py-6"
+                className="grid min-w-0 grid-cols-[96px_minmax(0,1fr)] items-baseline gap-4 border-b border-line py-6 sm:grid-cols-[110px_minmax(0,1fr)] sm:gap-6"
               >
                 <span className="text-xs uppercase tracking-[0.18em] text-muted">
                   {row.l}
                 </span>
-                <span className="font-display text-lg text-ink">{row.v}</span>
+                <span className="min-w-0 break-words font-display text-lg text-ink">
+                  {row.v}
+                </span>
               </li>
             ))}
           </ul>
 
-          <form onSubmit={onSubmit} className="flex flex-col gap-7">
+          <form onSubmit={onSubmit} className="flex min-w-0 flex-col gap-7">
             <div className="grid gap-7 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className={labelCls}>
