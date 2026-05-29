@@ -66,20 +66,6 @@ export const team: TeamMember[] = [
     },
   },
   {
-    slug: "emanuel-rodriguez-sampedro",
-    name: "Emanuel Rodriguez Sampedro",
-    photo: "/images/team/emanuel.jpg",
-    role: { es: "Consultor Área Laboral", en: "Labor Law Consultant" },
-    credentials: {
-      es: ["Abogado", "Especialista en Derecho Laboral y Seguridad Social"],
-      en: ["Lawyer", "Specialist in Labor Law and Social Security"],
-    },
-    bio: {
-      es: "Experiencia jurídica en el área laboral empresarial, defensa en procesos judiciales y trámites administrativos. Enfoque en estrategias legales efectivas, procesos de conciliación y resolución de conflictos ante organizaciones.",
-      en: "Legal experience in corporate labor law, defense in judicial proceedings and administrative procedures. Focused on effective legal strategies, conciliation processes and conflict resolution within organizations.",
-    },
-  },
-  {
     slug: "lizeth-tatiana-gomez-osorio",
     name: "Lizeth Tatiana Gómez Osorio",
     photo: "/images/team/lizeth.png",
@@ -177,23 +163,6 @@ export const team: TeamMember[] = [
     bio: {
       es: "Más de una década de experiencia en logística, importaciones y exportaciones. Experta en la operativización de procesos de comercio exterior y en el análisis financiero para la expansión internacional.",
       en: "Over a decade of experience in logistics, imports and exports. Expert in operationalizing foreign trade processes and financial analysis for international expansion.",
-    },
-  },
-  {
-    slug: "gisela-alejandra-gomez",
-    name: "Gisela Alejandra Gómez",
-    photo: "/images/team/gisela.jpeg",
-    role: {
-      es: "Asesora de Marketing Digital",
-      en: "Digital Marketing Advisor",
-    },
-    credentials: {
-      es: ["Community Manager"],
-      en: ["Community Manager"],
-    },
-    bio: {
-      es: "Experiencia en gestión y posicionamiento de marcas en redes sociales. Especializada en creación de contenido estratégico, producción de piezas visuales, campañas digitales y fortalecimiento de comunidades online.",
-      en: "Experience in brand management and positioning on social media. Specialized in strategic content creation, visual production, digital campaigns and online community building.",
     },
   },
   {

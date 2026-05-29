@@ -8,7 +8,7 @@ export function Hero() {
   const t = useTranslations("hero");
   const stats = [
     { num: "04", label: t("stats.areas") },
-    { num: "10", label: t("stats.team") },
+    { num: "08", label: t("stats.team") },
     { num: "+12", label: t("stats.sectors") },
     { num: "2026", label: t("stats.vision") },
   ];
@@ -45,7 +45,21 @@ export function Hero() {
           </span>
         </div>
 
-        <h1 className="mt-10 max-w-[18ch] font-display text-[clamp(2.6rem,8vw,6.5rem)] font-normal leading-[0.95] tracking-[-0.035em] text-white sm:mt-14">
+        <div className="mt-8 flex items-center gap-4 sm:mt-10">
+          <Image
+            src="/brand/ap-logo-header.png"
+            alt=""
+            width={54}
+            height={76}
+            className="h-16 w-auto object-contain"
+            aria-hidden
+          />
+          <span className="font-display text-2xl text-white sm:text-3xl">
+            AP Asociados
+          </span>
+        </div>
+
+        <h1 className="mt-7 max-w-[18ch] font-display text-[clamp(2.6rem,8vw,6.5rem)] font-normal leading-[0.95] tracking-[-0.035em] text-white sm:mt-10">
           {t("title")}
         </h1>
 

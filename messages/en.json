@@ -12,8 +12,8 @@
   },
   "hero": {
     "eyebrow": "Consulting firm · Pereira · Colombia",
-    "title": "We elevate your company to the global stage",
-    "subtitle": "We turn complex challenges into strategic advantages through high-level consulting in planning, legal protection and internationalization. We mitigate your risk; we guarantee your scalability.",
+    "title": "We scale your organization's potential",
+    "subtitle": "We structure high-performance business models and turn complex challenges into strategic advantages through high-level consulting in planning, legal protection and internationalization. We mitigate environmental risks and maximize the productivity of assets and teams.",
     "ctaPrimary": "Book a diagnosis",
     "ctaSecondary": "View services",
     "stats": {
@@ -25,7 +25,7 @@
   },
   "pillars": {
     "eyebrow": "Value proposition",
-    "title": "Allies in your expansion, experts in your security",
+    "title": "We protect your operations, optimize costs and accelerate sales",
     "subtitle": "We boost organizational competitiveness with a multidisciplinary approach.",
     "items": {
       "strategy": {
@@ -49,7 +49,7 @@
   "about": {
     "eyebrow": "About us",
     "title": "A consulting firm built for decisions that matter",
-    "body": "We are a high-level consulting firm made up of multidisciplinary specialists, focused on boosting the competitiveness of organizations in domestic and international markets. At Aristizabal Plata we turn complex challenges into strategic advantages through a service ecosystem that integrates legal architecture, advanced strategic planning and internationalization processes.",
+    "body": "Move beyond fragmented answers that create legal gaps or cost overruns. At AP Asociados we unify technical consulting to deliver one result: a company protected against legal or tax contingencies, with optimized personnel operating costs and a commercial team trained to exceed sales goals.",
     "quote": "Our commitment is to mitigate risk and guarantee the scalability and permanence of our clients, combining technical rigor with a global market vision.",
     "signature": "— Firm philosophy"
   },
@@ -73,16 +73,16 @@
     "taglineBold": "strengthen results",
     "items": {
       "0": {
-        "field": "Legal ally",
-        "contribution": "Extends response capacity in litigation and specialized legal matters."
+        "field": "Accounting and tax ally",
+        "contribution": "Extends our response capacity in accounting and tax services."
       },
       "1": {
-        "field": "Growth ally",
-        "contribution": "Adds capacity in commercial strategy and business development."
+        "field": "Labor law ally",
+        "contribution": "Strengthens legal processes with a focus on labor law."
       },
       "2": {
-        "field": "Mobility ally",
-        "contribution": "Strengthens internationalization processes and immigration support."
+        "field": "Criminal law and compliance ally",
+        "contribution": "Adds capacity in criminal legal services and compliance."
       }
     }
   },
@@ -90,22 +90,33 @@
     "eyebrow": "Institutional document",
     "title": "Explore the firm's full portfolio",
     "subtitle": "Download the 2026 portfolio with detailed services, team and strategic approach.",
-    "cta": "Download portfolio"
+    "cta": "Download portfolio",
+    "emailLabel": "Get access to the portfolio",
+    "emailNote": "Enter your business email and we will open the document immediately.",
+    "emailPlaceholder": "email@company.com",
+    "consent": "I authorize the processing of my information according to the",
+    "dataPolicy": "personal data policy",
+    "sending": "Sending…",
+    "success": "Portfolio enabled. Check the new tab.",
+    "error": "We could not enable the download. Please try again."
   },
   "events": {
     "eyebrow": "Events",
     "title": "Institutional presence and participation",
     "subtitle": "Spaces where the firm shares experience, builds networks and contributes to the business conversation.",
     "items": {
-      "0": { "meta": "2026 · Pereira", "title": "Business forum — Structure to grow", "text": "A conversation on legal and organizational architecture for expanding companies." },
-      "1": { "meta": "2025 · Bogotá", "title": "Internationalization meeting", "text": "Panel on market access, international contracts and intellectual property." },
-      "2": { "meta": "2025 · To be confirmed", "title": "Digital transformation workshop", "text": "Automation, data and digital ecosystems applied to the business sector." }
+      "0": { "meta": "Quindío · Investment", "title": "Investment attraction breakfast", "text": "Meeting in partnership with Invest in Armenia and the Quindío Investment Promotion Agency." },
+      "1": { "meta": "2025 · Labor reform", "title": "Impact and challenges for companies", "text": "Business conversation on labor changes and their operational impact." },
+      "2": { "meta": "National Police · Training", "title": "Skills to impact and transform", "text": "A space focused on strengthening skills for working teams." },
+      "3": { "meta": "Santa Rosa de Cabal · Development", "title": "From idea to action", "text": "Organizational development and soft skills that transform, with the Santa Rosa de Cabal Mayor's Office." },
+      "4": { "meta": "Cali · ProColombia", "title": "MacroRueda 101", "text": "Participation in the business meeting for connections and international opportunities." },
+      "5": { "meta": "Training · Companies", "title": "Team management and customer service", "text": "Training sessions on working teams, finance, seizures and service in high-pressure environments." }
     }
   },
   "testimonials": {
     "eyebrow": "Success stories",
-    "title": "What those who trusted us say",
-    "subtitle": "Real testimonials from companies and organizations supported by the firm.",
+    "title": "What clients who trusted AP say",
+    "subtitle": "Testimonials from companies and organizations supported by the firm.",
     "googleNote": "Verified reviews on Google",
     "items": {
       "0": { "quote": "Serious, clear and strategic support. They resolved legal matters and also helped us organize operations.", "author": "Verified client", "role": "Services sector" },
@@ -116,18 +127,27 @@
   "schedule": {
     "eyebrow": "Scheduling",
     "title": "Book a session with the firm",
-    "subtitle": "Choose the session type. The calendar syncs with consultants to remove the friction of back-and-forth emails.",
+    "subtitle": "Select your session and book instantly. Direct synchronization with our specialists to optimize your time.",
     "diagnostico": {
       "title": "Business diagnosis",
       "text": "Strategic assessment session with the strategy direction.",
-      "cta": "Book a diagnosis"
+      "cta": "Book a diagnosis",
+      "availability": "Sayal · Wednesday · 7:00 a.m. – 12:00 p.m."
     },
     "juridico": {
       "title": "Initial legal advice",
       "text": "First consultation with the corporate legal direction.",
-      "cta": "Book advice"
+      "cta": "Book advice",
+      "availability": "Jaime · Tuesday · 7:00 a.m. – 9:00 a.m."
     },
-    "soon": "Available soon"
+    "comercial": {
+      "title": "Business development",
+      "text": "Initial session to review commercial opportunities, operations and business relationships.",
+      "cta": "Book session",
+      "availability": "Tatiana · Wednesday · 2:00 p.m. – 4:00 p.m."
+    },
+    "soon": "Available soon",
+    "whatsappCta": "Ask via WhatsApp"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -150,6 +170,8 @@
       "companyPlaceholder": "Your company name",
       "message": "Message",
       "messagePlaceholder": "Briefly tell us your need",
+      "consent": "I authorize the processing of my information according to the",
+      "dataPolicy": "personal data policy",
       "submit": "Send message",
       "sending": "Sending…",
       "success": "Message sent ✓",
@@ -188,13 +210,13 @@
   "legal": {
     "dataPolicy": {
       "title": "Personal Data Protection Policy",
-      "intro": "In compliance with Colombian Law 1581 of 2012 and Decree 1377 of 2013, Aristizabal Plata states its personal data processing policy.",
-      "draftNote": "Content under legal review. The final version will be published by the firm."
+      "intro": "When submitting your details, you expressly authorize AP Asociados to collect, store and use your name, email address and phone number. This information is used to manage inquiries, send commercial proposals, coordinate consulting sessions and share relevant business information.",
+      "draftNote": "You may request access, updates, corrections or deletion of your information by writing to contacto@aristizabalplata.com."
     },
     "cookiePolicy": {
       "title": "Cookie Policy",
-      "intro": "This site uses technical cookies for proper operation and, optionally, analytics cookies.",
-      "draftNote": "Content under review. The final version will be published by the firm."
+      "intro": "We use first-party and third-party cookies to improve your browsing experience, analyze website performance and tailor our commercial solutions to your interests.",
+      "draftNote": "You can accept, reject or configure optional cookies using the privacy panel available on this site."
     }
   },
   "team": {

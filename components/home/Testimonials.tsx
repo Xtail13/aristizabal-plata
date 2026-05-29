@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -13,11 +14,21 @@ export function Testimonials() {
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <SectionHeading
-              eyebrow={t("eyebrow")}
-              title={t("title")}
-              subtitle={t("subtitle")}
-            />
+            <div className="flex items-start gap-4">
+              <Image
+                src="/brand/ap-logo.png"
+                alt=""
+                width={52}
+                height={73}
+                className="hidden h-16 w-auto object-contain sm:block"
+                aria-hidden
+              />
+              <SectionHeading
+                eyebrow={t("eyebrow")}
+                title={t("title")}
+                subtitle={t("subtitle")}
+              />
+            </div>
             <p className="mt-6 text-xs uppercase tracking-[0.16em] text-muted sm:mt-8">
               {t("googleNote")}
             </p>

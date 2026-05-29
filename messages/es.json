@@ -12,8 +12,8 @@
   },
   "hero": {
     "eyebrow": "Firma consultora · Pereira · Colombia",
-    "title": "Elevamos su empresa al escenario global",
-    "subtitle": "Transformamos desafíos complejos en ventajas estratégicas mediante consultoría de alto nivel en planeación, blindaje jurídico e internacionalización. Mitigamos su riesgo; garantizamos su escalabilidad.",
+    "title": "Escalamos el potencial de su organización",
+    "subtitle": "Estructuramos modelos de negocio de alto rendimiento y transformamos desafíos complejos en ventajas estratégicas mediante consultoría de alto nivel en planeación, blindaje jurídico e internacionalización. Mitigamos los riesgos del entorno y maximizamos la productividad de los activos y equipos de trabajo.",
     "ctaPrimary": "Agendar diagnóstico",
     "ctaSecondary": "Ver servicios",
     "stats": {
@@ -25,7 +25,7 @@
   },
   "pillars": {
     "eyebrow": "Propuesta de valor",
-    "title": "Aliados en su expansión, expertos en su seguridad",
+    "title": "Blindamos su operación, optimizamos sus costos y aceleramos sus ventas",
     "subtitle": "Impulsamos la competitividad de las organizaciones con un enfoque multidisciplinario.",
     "items": {
       "strategy": {
@@ -49,7 +49,7 @@
   "about": {
     "eyebrow": "Quiénes somos",
     "title": "Una firma consultora diseñada para decisiones empresariales de fondo",
-    "body": "Somos una firma consultora de alto nivel integrada por especialistas multidisciplinarios, enfocada en potenciar la competitividad de las organizaciones en mercados nacionales e internacionales. En Aristizabal Plata transformamos desafíos complejos en ventajas estratégicas a través de un ecosistema de servicios que integra la arquitectura jurídica, la planeación estratégica avanzada y el despliegue de procesos de internacionalización.",
+    "body": "Olvídese de las respuestas fragmentadas que generan vacíos legales o sobrecostos. En AP Asociados unificamos la consultoría técnica para ofrecerle un solo resultado: una empresa blindada ante contingencias jurídicas o tributarias, con costos operativos de personal optimizados y un equipo comercial entrenado para superar sus metas de ventas.",
     "quote": "Nuestro compromiso es mitigar el riesgo y garantizar la escalabilidad y permanencia de nuestros clientes, combinando el rigor técnico con una visión global de mercado.",
     "signature": "— Filosofía de la firma"
   },
@@ -73,16 +73,16 @@
     "taglineBold": "potencian resultados",
     "items": {
       "0": {
-        "field": "Aliado jurídico",
-        "contribution": "Amplía la capacidad de respuesta en litigio y asuntos legales especializados."
+        "field": "Aliado contable y tributario",
+        "contribution": "Amplía la capacidad de respuesta en servicios contables y tributarios."
       },
       "1": {
-        "field": "Aliado en crecimiento",
-        "contribution": "Suma capacidad en estrategia comercial y desarrollo de negocio."
+        "field": "Aliado jurídico laboral",
+        "contribution": "Refuerza los procesos jurídicos con enfoque en derecho laboral."
       },
       "2": {
-        "field": "Aliado en movilidad",
-        "contribution": "Refuerza los procesos de internacionalización y acompañamiento migratorio."
+        "field": "Aliado penal y compliance",
+        "contribution": "Suma capacidades en servicios jurídicos penales y compliance."
       }
     }
   },
@@ -90,22 +90,33 @@
     "eyebrow": "Documento institucional",
     "title": "Conozca el portafolio completo de la firma",
     "subtitle": "Descargue el portafolio 2026 con el detalle de servicios, equipo y enfoque estratégico.",
-    "cta": "Descargar portafolio"
+    "cta": "Descargar portafolio",
+    "emailLabel": "Reciba acceso al portafolio",
+    "emailNote": "Ingrese su correo empresarial y abriremos el documento inmediatamente.",
+    "emailPlaceholder": "correo@empresa.com",
+    "consent": "Autorizo el tratamiento de mis datos conforme a la",
+    "dataPolicy": "política de tratamiento de datos",
+    "sending": "Enviando…",
+    "success": "Portafolio habilitado. Revise la nueva pestaña.",
+    "error": "No pudimos habilitar la descarga. Intente nuevamente."
   },
   "events": {
     "eyebrow": "Eventos",
     "title": "Presencia institucional y participaciones",
     "subtitle": "Espacios donde la firma comparte experiencia, construye redes y aporta a la conversación empresarial.",
     "items": {
-      "0": { "meta": "2026 · Pereira", "title": "Foro empresarial — Estructura para crecer", "text": "Conversación sobre arquitectura jurídica y organizacional para compañías en expansión." },
-      "1": { "meta": "2025 · Bogotá", "title": "Encuentro de internacionalización", "text": "Panel sobre acceso a mercados, contratos internacionales y propiedad intelectual." },
-      "2": { "meta": "2025 · Por confirmar", "title": "Taller de transformación digital", "text": "Automatización, datos y ecosistemas digitales aplicados al sector empresarial." }
+      "0": { "meta": "Quindío · Inversión", "title": "Desayuno Atracción de Inversión", "text": "Encuentro en alianza con Invest in Armenia y la Agencia de Promoción de Inversiones del Quindío." },
+      "1": { "meta": "2025 · Reforma laboral", "title": "Impacto y retos para las empresas", "text": "Conversación empresarial sobre los cambios laborales y su efecto en la operación." },
+      "2": { "meta": "Policía Nacional · Formación", "title": "Habilidades para impactar y transformar", "text": "Espacio orientado al fortalecimiento de habilidades aplicadas a equipos de trabajo." },
+      "3": { "meta": "Santa Rosa de Cabal · Desarrollo", "title": "De la idea a la acción", "text": "Desarrollo organizacional y habilidades blandas que transforman, junto a la Alcaldía de Santa Rosa de Cabal." },
+      "4": { "meta": "Cali · ProColombia", "title": "MacroRueda 101", "text": "Participación en el encuentro empresarial de conexiones y oportunidades internacionales." },
+      "5": { "meta": "Formación · Empresas", "title": "Gestión de equipos y servicio al cliente", "text": "Capacitaciones sobre equipos de trabajo, finanzas, embargos y atención en entornos de alta tensión." }
     }
   },
   "testimonials": {
     "eyebrow": "Casos de éxito",
-    "title": "Lo que dicen quienes nos han confiado",
-    "subtitle": "Testimonios reales de empresas y organizaciones acompañadas por la firma.",
+    "title": "Lo que dicen los clientes que han confiado en AP",
+    "subtitle": "Testimonios de empresas y organizaciones que han acompañado la firma.",
     "googleNote": "Reseñas verificadas en Google",
     "items": {
       "0": { "quote": "Acompañamiento serio, claro y estratégico. Resolvieron asuntos legales y, además, nos ayudaron a ordenar la operación.", "author": "Cliente verificado", "role": "Sector servicios" },
@@ -116,18 +127,27 @@
   "schedule": {
     "eyebrow": "Agendamiento",
     "title": "Reserve una sesión con la firma",
-    "subtitle": "Elija el tipo de sesión. La agenda se sincroniza con los consultores para eliminar la fricción de los correos de ida y vuelta.",
+    "subtitle": "Seleccione su sesión y agende al instante. Sincronización directa con nuestros especialistas para optimizar su tiempo.",
     "diagnostico": {
       "title": "Diagnóstico empresarial",
       "text": "Sesión estratégica de evaluación con la dirección de estrategia.",
-      "cta": "Agendar diagnóstico"
+      "cta": "Agendar diagnóstico",
+      "availability": "Sayal · miércoles · 7:00 a. m. – 12:00 m."
     },
     "juridico": {
       "title": "Asesoría jurídica inicial",
       "text": "Primera consulta con la dirección jurídica empresarial.",
-      "cta": "Agendar asesoría"
+      "cta": "Agendar asesoría",
+      "availability": "Jaime · martes · 7:00 a. m. – 9:00 a. m."
     },
-    "soon": "Disponible próximamente"
+    "comercial": {
+      "title": "Desarrollo empresarial",
+      "text": "Sesión inicial para revisar oportunidades comerciales, operación y relaciones empresariales.",
+      "cta": "Agendar sesión",
+      "availability": "Tatiana · miércoles · 2:00 p. m. – 4:00 p. m."
+    },
+    "soon": "Disponible próximamente",
+    "whatsappCta": "Consultar por WhatsApp"
   },
   "contact": {
     "eyebrow": "Contacto",
@@ -150,6 +170,8 @@
       "companyPlaceholder": "Nombre de su compañía",
       "message": "Mensaje",
       "messagePlaceholder": "Cuéntenos brevemente su necesidad",
+      "consent": "Autorizo el tratamiento de mis datos conforme a la",
+      "dataPolicy": "política de tratamiento de datos",
       "submit": "Enviar mensaje",
       "sending": "Enviando…",
       "success": "Mensaje enviado ✓",
@@ -188,13 +210,13 @@
   "legal": {
     "dataPolicy": {
       "title": "Política de Tratamiento de Datos Personales",
-      "intro": "En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, Aristizabal Plata informa su política de tratamiento de datos personales.",
-      "draftNote": "Contenido en revisión legal. La versión definitiva será publicada por la firma."
+      "intro": "Al registrar sus datos, usted autoriza expresamente a AP Asociados para la recolección, almacenamiento y uso de su nombre, correo electrónico y celular. La finalidad de este tratamiento es gestionar sus consultas, enviar propuestas comerciales, coordinar sesiones de consultoría y compartir información de interés empresarial.",
+      "draftNote": "Como titular, puede conocer, actualizar, rectificar o solicitar la supresión de sus datos escribiendo a contacto@aristizabalplata.com."
     },
     "cookiePolicy": {
       "title": "Política de Cookies",
-      "intro": "Este sitio utiliza cookies técnicas para su correcto funcionamiento y, opcionalmente, cookies analíticas.",
-      "draftNote": "Contenido en revisión. La versión definitiva será publicada por la firma."
+      "intro": "Utilizamos cookies propias y de terceros para optimizar su experiencia de navegación, analizar el rendimiento de nuestra web y personalizar nuestras soluciones comerciales según sus intereses.",
+      "draftNote": "Puede aceptar, rechazar o configurar el uso de cookies opcionales desde el panel de privacidad disponible en este sitio."
     }
   },
   "team": {

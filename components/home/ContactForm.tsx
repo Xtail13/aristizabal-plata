@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { EyebrowLabel } from "@/components/shared/EyebrowLabel";
 import { siteConfig } from "@/lib/siteConfig";
+import { Link } from "@/i18n/navigation";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -137,6 +138,23 @@ export function ContactForm() {
                 className={`${fieldCls} resize-y`}
               />
             </div>
+            <label className="flex items-start gap-2 text-xs leading-relaxed text-muted">
+              <input
+                type="checkbox"
+                name="data_consent"
+                required
+                className="mt-0.5 h-4 w-4 accent-[#a98a4b]"
+              />
+              <span>
+                {t("form.consent")}{" "}
+                <Link
+                  href="/politicas/tratamiento-datos"
+                  className="underline underline-offset-2 hover:text-ink"
+                >
+                  {t("form.dataPolicy")}
+                </Link>
+              </span>
+            </label>
 
             <button
               type="submit"

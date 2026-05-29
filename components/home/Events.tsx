@@ -10,7 +10,7 @@ export function Events() {
     "/images/guide/event-1.jpg",
     "/images/guide/event-2.jpg",
   ];
-  const idx = ["0", "1", "2"] as const;
+  const idx = ["0", "1", "2", "3", "4", "5"] as const;
 
   return (
     <section className="bg-navy-soft py-14 text-white sm:py-24 lg:py-28">
@@ -24,7 +24,7 @@ export function Events() {
       </Container>
       <Container>
         <div className="mt-8 sm:mt-14">
-          <div className="grid gap-4 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-4 md:grid-cols-3 md:gap-x-8 md:gap-y-12">
             {idx.map((i) => {
               const meta = t(`items.${i}.meta`);
               const [, ...rest] = meta.split("·").map((s) => s.trim());
@@ -35,7 +35,7 @@ export function Events() {
                   className="grid grid-cols-[6.5rem_1fr] gap-4 border-t border-white/15 pt-4 md:block md:border-t-0 md:pt-0"
                 >
                   <EditorialFrame
-                    src={eventGuideImages[Number(i)]}
+                    src={eventGuideImages[Number(i) % eventGuideImages.length]}
                     alt={t(`items.${i}.title`)}
                     ratio="aspect-[4/5] md:aspect-[4/3]"
                     caption={rest.join(" · ")}
