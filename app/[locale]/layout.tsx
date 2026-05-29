@@ -9,6 +9,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
+import { PrivacyConsent } from "@/components/layout/PrivacyConsent";
 import "../globals.css";
 
 const fraunces = Fraunces({
@@ -86,6 +87,7 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <Footer />
           <WhatsAppFloat />
+          <PrivacyConsent />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

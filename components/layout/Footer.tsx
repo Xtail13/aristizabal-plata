@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/siteConfig";
+import { PrivacySettingsButton } from "./PrivacyConsent";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -52,6 +53,9 @@ export function Footer() {
                 <Link href="/politicas/cookies" className="hover:text-gold">
                   {t("cookiePolicy")}
                 </Link>
+              </li>
+              <li>
+                <PrivacySettingsButton />
               </li>
             </ul>
           </div>

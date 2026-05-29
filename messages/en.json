@@ -167,6 +167,24 @@
     "rights": "All rights reserved.",
     "whatsapp": "Let's talk?"
   },
+  "privacyConsent": {
+    "eyebrow": "Privacy",
+    "title": "Cookies and personal data",
+    "cookies": "We use first-party and third-party cookies to improve your browsing experience, analyze website performance and tailor our commercial solutions to your interests.",
+    "data": "When you submit your details, you authorize AP Asociados to use them to manage inquiries, send commercial proposals, coordinate consulting sessions and share relevant business information.",
+    "necessaryTitle": "Necessary cookies",
+    "necessaryText": "These support the site's essential operation and cannot be disabled.",
+    "analyticsTitle": "Analytics cookies",
+    "analyticsText": "These help us understand site performance and improve your experience.",
+    "alwaysActive": "Always active",
+    "cookiePolicy": "Cookie policy",
+    "dataPolicy": "Personal data policy",
+    "configure": "Configure",
+    "reject": "Reject optional",
+    "accept": "Accept",
+    "save": "Save preferences",
+    "manage": "Privacy settings"
+  },
   "legal": {
     "dataPolicy": {
       "title": "Personal Data Protection Policy",

@@ -167,6 +167,24 @@
     "rights": "Todos los derechos reservados.",
     "whatsapp": "¿Hablamos?"
   },
+  "privacyConsent": {
+    "eyebrow": "Privacidad",
+    "title": "Cookies y tratamiento de datos",
+    "cookies": "Utilizamos cookies propias y de terceros para optimizar su experiencia de navegación, analizar el rendimiento de nuestra web y personalizar nuestras soluciones comerciales según sus intereses.",
+    "data": "Cuando registra sus datos, autoriza a AP Asociados a usarlos para gestionar consultas, enviar propuestas comerciales, coordinar sesiones de consultoría y compartir información empresarial de interés.",
+    "necessaryTitle": "Cookies necesarias",
+    "necessaryText": "Permiten el funcionamiento básico del sitio y no pueden desactivarse.",
+    "analyticsTitle": "Cookies analíticas",
+    "analyticsText": "Nos ayudan a entender el rendimiento del sitio para mejorar su experiencia.",
+    "alwaysActive": "Siempre activas",
+    "cookiePolicy": "Política de cookies",
+    "dataPolicy": "Tratamiento de datos personales",
+    "configure": "Configurar",
+    "reject": "Rechazar opcionales",
+    "accept": "Aceptar",
+    "save": "Guardar preferencias",
+    "manage": "Configurar privacidad"
+  },
   "legal": {
     "dataPolicy": {
       "title": "Política de Tratamiento de Datos Personales",
