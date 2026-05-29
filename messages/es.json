@@ -110,7 +110,9 @@
       "2": { "meta": "Policía Nacional · Formación", "title": "Habilidades para impactar y transformar", "text": "Espacio orientado al fortalecimiento de habilidades aplicadas a equipos de trabajo." },
       "3": { "meta": "Santa Rosa de Cabal · Desarrollo", "title": "De la idea a la acción", "text": "Desarrollo organizacional y habilidades blandas que transforman, junto a la Alcaldía de Santa Rosa de Cabal." },
       "4": { "meta": "Cali · ProColombia", "title": "MacroRueda 101", "text": "Participación en el encuentro empresarial de conexiones y oportunidades internacionales." },
-      "5": { "meta": "Formación · Empresas", "title": "Gestión de equipos y servicio al cliente", "text": "Capacitaciones sobre equipos de trabajo, finanzas, embargos y atención en entornos de alta tensión." }
+      "5": { "meta": "Formación · Empresas", "title": "Gestión de equipos de trabajo", "text": "Capacitación junto a GMN Sport Nutrition, Jessica Ocampo Fisioterapeuta y Estado del Arte." },
+      "6": { "meta": "Policía Nacional · Finanzas", "title": "Finanzas y embargos", "text": "Espacio de formación financiera dirigido a integrantes de la Policía Nacional." },
+      "7": { "meta": "Servicio al cliente · Formación", "title": "Servicio al cliente en entornos de alta tensión", "text": "Capacitación junto a Estado del Arte, Jessica Ocampo Fisioterapeuta y la Policía Nacional." }
     }
   },
   "testimonials": {

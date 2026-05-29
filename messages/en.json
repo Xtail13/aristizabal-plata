@@ -110,7 +110,9 @@
       "2": { "meta": "National Police · Training", "title": "Skills to impact and transform", "text": "A space focused on strengthening skills for working teams." },
       "3": { "meta": "Santa Rosa de Cabal · Development", "title": "From idea to action", "text": "Organizational development and soft skills that transform, with the Santa Rosa de Cabal Mayor's Office." },
       "4": { "meta": "Cali · ProColombia", "title": "MacroRueda 101", "text": "Participation in the business meeting for connections and international opportunities." },
-      "5": { "meta": "Training · Companies", "title": "Team management and customer service", "text": "Training sessions on working teams, finance, seizures and service in high-pressure environments." }
+      "5": { "meta": "Training · Companies", "title": "Team management", "text": "Training session with GMN Sport Nutrition, Jessica Ocampo Physiotherapy and Estado del Arte." },
+      "6": { "meta": "National Police · Finance", "title": "Finance and seizures", "text": "Financial training session for members of the National Police." },
+      "7": { "meta": "Customer service · Training", "title": "Customer service in high-pressure environments", "text": "Training session with Estado del Arte, Jessica Ocampo Physiotherapy and the National Police." }
     }
   },
   "testimonials": {
