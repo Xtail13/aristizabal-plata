@@ -12,33 +12,17 @@ const portfolioUrl = "/portfolio/portafolio_AP_2026.pdf";
 
 export function PortfolioDownload() {
   const t = useTranslations("portfolio");
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setStatus("sending");
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: siteConfig.web3formsKey,
-          subject: "Descarga de portafolio AP Asociados",
-          from_name: "Sitio web AP Asociados",
-          email,
-          message: `Solicitud de descarga de portafolio: ${email}`,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Unable to register portfolio lead");
-
-      setStatus("success");
-      window.open(portfolioUrl, "_blank", "noopener,noreferrer");
-    } catch {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    if (!siteConfig.portfolioLeadEndpoint) {
+      event.preventDefault();
       setStatus("error");
+      return;
     }
+
+    setStatus("success");
+    window.open(portfolioUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -54,7 +38,23 @@ export function PortfolioDownload() {
             </h2>
             <p className="mt-4 max-w-lg text-white/65">{t("subtitle")}</p>
           </div>
-          <form onSubmit={handleSubmit} className="border border-white/15 bg-navy/70 p-4 sm:p-6">
+          <form
+            action={siteConfig.portfolioLeadEndpoint}
+            method="POST"
+            target="portfolio-lead-sink"
+            onSubmit={handleSubmit}
+            className="border border-white/15 bg-navy/70 p-4 sm:p-6"
+          >
+            <input type="hidden" name="origin" value="Sitio web - descarga de portafolio" />
+            <input type="hidden" name="data_consent" value="accepted" />
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden
+            />
             <label htmlFor="portfolio-email" className="text-sm font-medium text-white">
               {t("emailLabel")}
             </label>
@@ -62,19 +62,17 @@ export function PortfolioDownload() {
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <input
                 id="portfolio-email"
+                name="email"
                 type="email"
                 required
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
                 placeholder={t("emailPlaceholder")}
                 className="min-w-0 flex-1 border border-white/25 bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-white/40 focus:border-gold"
               />
               <button
                 type="submit"
-                disabled={status === "sending"}
-                className="shrink-0 bg-white px-5 py-3 text-sm font-medium text-navy transition-colors hover:bg-gold hover:text-white disabled:opacity-60"
+                className="shrink-0 bg-white px-5 py-3 text-sm font-medium text-navy transition-colors hover:bg-gold hover:text-white"
               >
-                {status === "sending" ? t("sending") : t("cta")}
+                {t("cta")}
               </button>
             </div>
             <label className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-white/60">
@@ -91,6 +89,7 @@ export function PortfolioDownload() {
           </form>
         </div>
       </Container>
+      <iframe name="portfolio-lead-sink" title="Registro de descarga" className="hidden" />
     </section>
   );
 }
