@@ -12,7 +12,7 @@ export const team: TeamMember[] = [
   {
     slug: "sayal-aristizabal-plata",
     name: "Sayal Aristizabal Plata",
-    photo: "/images/team/sayal.png",
+    photo: "/media/team/sayal.png",
     role: {
       es: "Directora General de Estrategia y Desarrollo Empresarial",
       en: "General Director of Strategy and Business Development",
@@ -41,7 +41,7 @@ export const team: TeamMember[] = [
   {
     slug: "jaime-aristizabal-plata",
     name: "Jaime Aristizabal Plata",
-    photo: "/images/team/jaime.png",
+    photo: "/media/team/jaime.png",
     role: {
       es: "Director Jurídico Empresarial",
       en: "Corporate Legal Director",
@@ -68,7 +68,7 @@ export const team: TeamMember[] = [
   {
     slug: "lizeth-tatiana-gomez-osorio",
     name: "Lizeth Tatiana Gómez Osorio",
-    photo: "/images/team/lizeth.png",
+    photo: "/media/team/lizeth.png",
     role: {
       es: "Líder de Desarrollo Empresarial y Relaciones Comerciales",
       en: "Business Development and Commercial Relations Lead",
@@ -91,7 +91,7 @@ export const team: TeamMember[] = [
   {
     slug: "deisi-johana-duque-torres",
     name: "Deisi Johana Duque Torres",
-    photo: "/images/team/deisi.jpeg",
+    photo: "/media/team/deisi.jpeg",
     role: {
       es: "Consultora Financiera y de Planeación",
       en: "Financial and Planning Consultant",
@@ -118,7 +118,7 @@ export const team: TeamMember[] = [
   {
     slug: "esteban-manrique-giraldo",
     name: "Esteban Manrique Giraldo",
-    photo: "/images/team/esteban.jpeg",
+    photo: "/media/team/esteban.jpeg",
     role: {
       es: "Consultor Procesal y Penal",
       en: "Litigation and Criminal Law Consultant",
@@ -143,7 +143,7 @@ export const team: TeamMember[] = [
   {
     slug: "edna-catalina-osorio-alzate",
     name: "Edna Catalina Osorio Alzate",
-    photo: "/images/team/edna.jpeg",
+    photo: "/media/team/edna.jpeg",
     role: {
       es: "Consultora de Comercio Exterior",
       en: "Foreign Trade Consultant",
@@ -168,7 +168,7 @@ export const team: TeamMember[] = [
   {
     slug: "karol-viviana-sanchez",
     name: "Karol Viviana Sánchez",
-    photo: "/images/team/karol.png",
+    photo: "/media/team/karol.png",
     role: {
       es: "Consultora de Sistemas de Gestión de Calidad",
       en: "Quality Management Systems Consultant",
@@ -195,7 +195,7 @@ export const team: TeamMember[] = [
   {
     slug: "miguel-angel-aristizabal-plata",
     name: "Miguel Angel Aristizabal Plata",
-    photo: "/images/team/miguel.jpeg",
+    photo: "/media/team/miguel.jpeg",
     role: {
       es: "Pasante de Marketing Operativo y Eventos",
       en: "Operational Marketing and Events Intern",

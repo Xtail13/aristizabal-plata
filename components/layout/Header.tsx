@@ -41,7 +41,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/brand/ap-logo-header.png"
+            src="/media/brand/ap-logo-header.png"
             alt="Aristizabal Plata"
             width={96}
             height={136}

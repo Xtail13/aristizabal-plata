@@ -17,7 +17,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-navy pb-20 pt-36 text-white sm:pt-44">
       {/* Fotografía de guía — reemplazar src por imagen institucional final */}
       <Image
-        src="/images/guide/hero.jpg"
+        src="/media/institutional/hero-office.jpg"
         alt=""
         fill
         priority
@@ -47,7 +47,7 @@ export function Hero() {
 
         <div className="mt-8 flex items-center gap-4 sm:mt-10">
           <Image
-            src="/brand/ap-logo-header.png"
+            src="/media/brand/ap-logo-header.png"
             alt=""
             width={54}
             height={76}

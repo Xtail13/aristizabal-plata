@@ -7,30 +7,30 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const eventImages = [
-  ["/images/events/investment-breakfast.jpeg"],
-  ["/images/events/labor-reform.jpeg"],
+  ["/media/events/investment-breakfast.jpeg"],
+  ["/media/events/labor-reform.jpeg"],
   [
-    "/images/events/impact-transform-01.jpeg",
-    "/images/events/impact-transform-02.jpeg",
+    "/media/events/impact-transform-01.jpeg",
+    "/media/events/impact-transform-02.jpeg",
   ],
-  ["/images/events/idea-action-01.jpeg", "/images/events/idea-action-02.jpeg"],
+  ["/media/events/idea-action-01.jpeg", "/media/events/idea-action-02.jpeg"],
   [
-    "/images/events/macrorueda-01.jpeg",
-    "/images/events/macrorueda-02.jpeg",
-    "/images/events/macrorueda-03.jpeg",
-  ],
-  [
-    "/images/events/team-management-01.jpeg",
-    "/images/events/team-management-02.jpeg",
+    "/media/events/macrorueda-01.jpeg",
+    "/media/events/macrorueda-02.jpeg",
+    "/media/events/macrorueda-03.jpeg",
   ],
   [
-    "/images/events/finances-seizures-01.jpeg",
-    "/images/events/finances-seizures-02.jpeg",
-    "/images/events/finances-seizures-03.jpeg",
+    "/media/events/team-management-01.jpeg",
+    "/media/events/team-management-02.jpeg",
   ],
   [
-    "/images/events/high-tension-service-01.jpeg",
-    "/images/events/high-tension-service-02.jpeg",
+    "/media/events/finances-seizures-01.jpeg",
+    "/media/events/finances-seizures-02.jpeg",
+    "/media/events/finances-seizures-03.jpeg",
+  ],
+  [
+    "/media/events/high-tension-service-01.jpeg",
+    "/media/events/high-tension-service-02.jpeg",
   ],
 ] as const;
 

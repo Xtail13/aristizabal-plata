@@ -22,7 +22,7 @@ export function About() {
           <Reveal className="flex flex-col gap-6 sm:gap-10 lg:pt-12">
             {/* Foto de guía — reemplazar por retrato editorial final del equipo directivo */}
             <EditorialFrame
-              src="/images/guide/about.jpg"
+              src="/media/institutional/about-office.jpg"
               alt="Espacio corporativo de Aristizabal Plata"
               ratio="aspect-[4/5]"
             />

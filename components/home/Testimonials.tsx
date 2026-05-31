@@ -16,7 +16,7 @@ export function Testimonials() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <div className="flex items-start gap-4">
               <Image
-                src="/brand/ap-logo.png"
+                src="/media/brand/ap-logo-primary.png"
                 alt=""
                 width={52}
                 height={73}

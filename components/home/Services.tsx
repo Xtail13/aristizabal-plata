@@ -58,7 +58,7 @@ export function Services({ hideHeading = false }: { hideHeading?: boolean }) {
           <div className="lg:sticky lg:top-28 lg:self-start">
             {/* Foto de guía por área. Foto final: añadir `image` por servicio en lib/services.ts */}
             <EditorialFrame
-              src="/images/guide/service.jpg"
+              src="/media/institutional/services-consulting.jpg"
               alt={current.title[locale]}
               ratio="aspect-[4/3]"
               caption={`${t("areaLabel")} ${current.number}`}

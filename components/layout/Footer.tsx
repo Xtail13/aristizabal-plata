@@ -46,7 +46,7 @@ export function Footer() {
         <div className="grid gap-12 pb-16 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Image
-              src="/brand/ap-logo.png"
+              src="/media/brand/ap-logo-primary.png"
               alt="Aristizabal Plata"
               width={120}
               height={44}
