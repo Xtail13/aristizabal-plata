@@ -88,26 +88,6 @@ export function Footer() {
                 <PrivacySettingsButton />
               </li>
             </ul>
-            <div className="mt-7">
-              <h5 className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                {t("socialTitle")}
-              </h5>
-              <div className="flex flex-wrap gap-2.5">
-                {socialLinks.map(({ key, href, icon }) => (
-                  <a
-                    key={key}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t(`social.${key}`)}
-                    title={t(`social.${key}`)}
-                    className="grid h-11 w-11 place-items-center rounded-[2px] border border-line text-ink-soft transition-colors hover:border-gold hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-                  >
-                    {icon}
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div>
@@ -129,6 +109,26 @@ export function Footer() {
                 {siteConfig.city} · {siteConfig.country}
               </li>
             </ul>
+            <div className="mt-7">
+              <h5 className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-muted">
+                {t("socialTitle")}
+              </h5>
+              <div className="flex flex-wrap gap-2.5">
+                {socialLinks.map(({ key, href, icon }) => (
+                  <a
+                    key={key}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t(`social.${key}`)}
+                    title={t(`social.${key}`)}
+                    className="grid h-11 w-11 place-items-center rounded-[2px] border border-line text-ink-soft transition-colors hover:border-gold hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
