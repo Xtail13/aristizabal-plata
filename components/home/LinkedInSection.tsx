@@ -11,18 +11,18 @@ export function LinkedInSection() {
       <Container>
         <div className="grid gap-8 border-y border-line py-8 sm:py-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
           <div className="flex items-center gap-5 lg:border-r lg:border-line lg:py-5">
-            <span
-              className="grid h-16 w-16 shrink-0 place-items-center rounded-[4px] bg-[#0a66c2] text-2xl font-bold leading-none text-white sm:h-20 sm:w-20 sm:text-3xl"
-              aria-hidden
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("logoCta")}
+              className="grid h-16 w-16 shrink-0 place-items-center rounded-[4px] bg-[#0a66c2] text-2xl font-bold leading-none text-white transition-colors hover:bg-[#004182] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0a66c2] sm:h-20 sm:w-20 sm:text-3xl"
             >
               in
-            </span>
+            </a>
             <div>
               <p className="text-[0.68rem] uppercase tracking-[0.2em] text-gold">
                 {t("eyebrow")}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {t("handle")}
               </p>
             </div>
           </div>
