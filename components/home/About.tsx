@@ -22,8 +22,8 @@ export function About() {
           <Reveal className="flex flex-col gap-6 sm:gap-10 lg:pt-12">
             {/* Foto de guía — reemplazar por retrato editorial final del equipo directivo */}
             <EditorialFrame
-              src="/media/institutional/about-office.jpg"
-              alt="Espacio corporativo de Aristizabal Plata"
+              src="/media/institutional/about-speaker-presentation.jpeg"
+              alt="Consultor de Aristizabal Plata durante una presentación"
               ratio="aspect-[4/5]"
             />
             <div className="relative border-l border-gold/40 pl-8">

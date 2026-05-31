@@ -23,7 +23,7 @@ Todos los recursos visuales de la pagina se guardan en esta carpeta.
 - `brand/ap-logo-header.png`
 - `brand/ap-logo-primary.png`
 - `institutional/hero-office.jpg`
-- `institutional/about-office.jpg`
+- `institutional/about-speaker-presentation.jpeg`
 - `institutional/services-consulting.jpg`
 
-Los archivos `institutional/event-reference-*.jpg` se conservan como referencias visuales y actualmente no se muestran en la pagina.
+Los archivos `institutional/about-office.jpg` y `institutional/event-reference-*.jpg` se conservan como referencias visuales y actualmente no se muestran en la pagina.
