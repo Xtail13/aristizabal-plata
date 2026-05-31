@@ -25,6 +25,7 @@ export function About() {
               src="/media/institutional/about-speaker-presentation.jpeg"
               alt="Consultor de Aristizabal Plata durante una presentación"
               ratio="aspect-[4/5]"
+              tone="light"
             />
             <div className="relative border-l border-gold/40 pl-8">
               <span className="absolute -left-1 -top-6 font-display text-7xl leading-none text-gold/40">

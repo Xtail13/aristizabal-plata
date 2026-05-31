@@ -132,6 +132,9 @@ body {
 .ap-duotone {
   filter: grayscale(1) contrast(1.05) brightness(0.92);
 }
+.ap-duotone--light {
+  filter: grayscale(1) contrast(1.02) brightness(1.12);
+}
 .ap-duotone-wrap::after {
   content: "";
   position: absolute;
@@ -143,6 +146,13 @@ body {
   );
   mix-blend-mode: multiply;
   pointer-events: none;
+}
+.ap-duotone-wrap--light::after {
+  background: linear-gradient(
+    160deg,
+    rgba(11, 31, 51, 0.58),
+    rgba(20, 48, 77, 0.36)
+  );
 }
 
 .ap-reveal {

@@ -12,6 +12,7 @@ interface EditorialFrameProps {
   accent?: ReactNode;
   /** Etiqueta breve inferior (meta) para la composición sin foto. */
   caption?: ReactNode;
+  tone?: "default" | "light";
   className?: string;
 }
 
@@ -27,11 +28,14 @@ export function EditorialFrame({
   ratio = "aspect-[4/3]",
   accent,
   caption,
+  tone = "default",
   className = "",
 }: EditorialFrameProps) {
+  const toneClass = tone === "light" ? "ap-duotone-wrap--light" : "";
+
   return (
     <div
-      className={`ap-duotone-wrap relative ${ratio} overflow-hidden rounded-[2px] bg-navy ${className}`}
+      className={`ap-duotone-wrap ${toneClass} relative ${ratio} overflow-hidden rounded-[2px] bg-navy ${className}`}
     >
       {src ? (
         <Image
@@ -39,7 +43,7 @@ export function EditorialFrame({
           alt={alt}
           fill
           sizes="(max-width:768px) 100vw, 33vw"
-          className="ap-duotone object-cover"
+          className={`ap-duotone object-cover ${tone === "light" ? "ap-duotone--light" : ""}`}
         />
       ) : (
         <>
