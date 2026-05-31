@@ -196,7 +196,13 @@
     "dataPolicy": "Data protection policy",
     "cookiePolicy": "Cookie policy",
     "rights": "All rights reserved.",
-    "whatsapp": "Let's talk?"
+    "whatsapp": "Let's talk?",
+    "socialTitle": "Follow us",
+    "social": {
+      "instagram": "AP Asociados on Instagram",
+      "linkedin": "AP Asociados on LinkedIn",
+      "whatsapp": "AP Asociados on WhatsApp"
+    }
   },
   "privacyConsent": {
     "eyebrow": "Privacy",

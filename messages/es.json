@@ -196,7 +196,13 @@
     "dataPolicy": "Política de tratamiento de datos",
     "cookiePolicy": "Política de cookies",
     "rights": "Todos los derechos reservados.",
-    "whatsapp": "¿Hablamos?"
+    "whatsapp": "¿Hablamos?",
+    "socialTitle": "Síganos",
+    "social": {
+      "instagram": "Instagram de AP Asociados",
+      "linkedin": "LinkedIn de AP Asociados",
+      "whatsapp": "WhatsApp de AP Asociados"
+    }
   },
   "privacyConsent": {
     "eyebrow": "Privacidad",

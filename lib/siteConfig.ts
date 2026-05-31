@@ -12,6 +12,7 @@ export const siteConfig = {
   hours: "Lun – Vie · 8:00 – 18:00",
   url: "https://aristizabalplata.com",
   linkedin: "https://www.linkedin.com/company/ap-aristizabal-plata/",
+  instagram: "https://www.instagram.com/aristizabalplataasociados/",
   // Web3Forms — clave reutilizada del sitio actual.
   web3formsKey: "00f0d8c3-8f1a-419a-90a8-9422911f4672",
   portfolioLeadEndpoint: process.env.NEXT_PUBLIC_PORTFOLIO_LEAD_ENDPOINT ?? "",
