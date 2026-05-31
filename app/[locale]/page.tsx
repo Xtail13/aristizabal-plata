@@ -8,6 +8,7 @@ import { ClientsMarquee } from "@/components/home/ClientsMarquee";
 import { StrategicAllies } from "@/components/home/StrategicAllies";
 import { PortfolioDownload } from "@/components/home/PortfolioDownload";
 import { Events } from "@/components/home/Events";
+import { LinkedInSection } from "@/components/home/LinkedInSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { TeamGrid } from "@/components/home/TeamGrid";
 import { ScheduleModule } from "@/components/home/ScheduleModule";
@@ -31,6 +32,7 @@ export default async function HomePage({
       <StrategicAllies />
       <PortfolioDownload />
       <Events />
+      <LinkedInSection />
       <Testimonials />
       <TeamGrid preview />
       <ScheduleModule />

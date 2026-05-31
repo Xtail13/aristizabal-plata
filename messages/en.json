@@ -115,6 +115,13 @@
       "7": { "meta": "Customer service · Training", "title": "Customer service in high-pressure environments", "text": "Training session with Estado del Arte, Jessica Ocampo Physiotherapy and the National Police." }
     }
   },
+  "linkedin": {
+    "eyebrow": "LinkedIn · AP Asociados",
+    "handle": "linkedin.com/company/ap-aristizabal-plata",
+    "title": "Follow the AP Asociados business conversation",
+    "subtitle": "Discover our participation, perspectives and institutional updates on LinkedIn.",
+    "cta": "Visit LinkedIn"
+  },
   "testimonials": {
     "eyebrow": "Success stories",
     "title": "What clients who trusted AP say",

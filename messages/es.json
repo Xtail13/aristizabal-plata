@@ -115,6 +115,13 @@
       "7": { "meta": "Servicio al cliente · Formación", "title": "Servicio al cliente en entornos de alta tensión", "text": "Capacitación junto a Estado del Arte, Jessica Ocampo Fisioterapeuta y la Policía Nacional." }
     }
   },
+  "linkedin": {
+    "eyebrow": "LinkedIn · AP Asociados",
+    "handle": "linkedin.com/company/ap-aristizabal-plata",
+    "title": "Siga la conversación empresarial de AP Asociados",
+    "subtitle": "Conozca nuestras participaciones, perspectivas y novedades institucionales en LinkedIn.",
+    "cta": "Visitar LinkedIn"
+  },
   "testimonials": {
     "eyebrow": "Casos de éxito",
     "title": "Lo que dicen los clientes que han confiado en AP",
