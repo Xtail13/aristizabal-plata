@@ -10,6 +10,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.apasociados.co",
+          },
+        ],
+        destination: "https://apasociados.co/:path*",
+        permanent: true,
+      },
+      {
         source: "/",
         destination: "/es",
         permanent: false,
