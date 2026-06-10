@@ -17,15 +17,28 @@ export function ContactForm() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    data.append("access_key", siteConfig.web3formsKey);
-    data.append("subject", "Nuevo contacto — Aristizabal Plata");
     setStatus("sending");
+
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/leads", {
         method: "POST",
-        body: data,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "contact",
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          company: data.get("company"),
+          message: data.get("message"),
+          data_consent: data.get("data_consent"),
+          website: data.get("website"),
+          origin: "Sitio web - formulario de contacto",
+        }),
       });
-      if (!res.ok) throw new Error("request failed");
+      const result = (await res.json()) as { ok?: boolean };
+
+      if (!res.ok || !result.ok) throw new Error("request failed");
+
       setStatus("success");
       form.reset();
     } catch {
@@ -74,6 +87,14 @@ export function ContactForm() {
           </ul>
 
           <form onSubmit={onSubmit} className="flex min-w-0 flex-col gap-7">
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden
+            />
             <div className="grid gap-7 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className={labelCls}>
@@ -144,6 +165,7 @@ export function ContactForm() {
               <input
                 type="checkbox"
                 name="data_consent"
+                value="accepted"
                 required
                 className="mt-0.5 h-4 w-4 accent-[#a98a4b]"
               />

@@ -6,23 +6,50 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { EyebrowLabel } from "@/components/shared/EyebrowLabel";
 import { Grain } from "@/components/shared/Grain";
-import { siteConfig } from "@/lib/siteConfig";
 
 const portfolioUrl = "/portfolio/portafolio_AP_2026.pdf";
 
 export function PortfolioDownload() {
   const t = useTranslations("portfolio");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    if (!siteConfig.portfolioLeadEndpoint) {
-      event.preventDefault();
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const portfolioWindow = window.open("", "_blank");
+
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "portfolio",
+          email: data.get("email"),
+          data_consent: "accepted",
+          website: data.get("website"),
+          origin: "Sitio web - descarga de portafolio",
+        }),
+      });
+      const result = (await response.json()) as { ok?: boolean };
+
+      if (!response.ok || !result.ok) throw new Error("request failed");
+
+      setStatus("success");
+      form.reset();
+
+      if (portfolioWindow) {
+        portfolioWindow.opener = null;
+        portfolioWindow.location.href = portfolioUrl;
+      } else {
+        window.location.href = portfolioUrl;
+      }
+    } catch {
+      portfolioWindow?.close();
       setStatus("error");
-      return;
     }
-
-    setStatus("success");
-    window.open(portfolioUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -39,14 +66,9 @@ export function PortfolioDownload() {
             <p className="mt-4 max-w-lg text-white/65">{t("subtitle")}</p>
           </div>
           <form
-            action={siteConfig.portfolioLeadEndpoint}
-            method="POST"
-            target="portfolio-lead-sink"
             onSubmit={handleSubmit}
             className="border border-white/15 bg-navy/70 p-4 sm:p-6"
           >
-            <input type="hidden" name="origin" value="Sitio web - descarga de portafolio" />
-            <input type="hidden" name="data_consent" value="accepted" />
             <input
               type="text"
               name="website"
@@ -70,6 +92,7 @@ export function PortfolioDownload() {
               />
               <button
                 type="submit"
+                disabled={status === "sending"}
                 className="shrink-0 bg-white px-5 py-3 text-sm font-medium text-navy transition-colors hover:bg-gold hover:text-white"
               >
                 {t("cta")}
@@ -89,7 +112,6 @@ export function PortfolioDownload() {
           </form>
         </div>
       </Container>
-      <iframe name="portfolio-lead-sink" title="Registro de descarga" className="hidden" />
     </section>
   );
 }
