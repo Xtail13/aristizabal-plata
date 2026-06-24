@@ -13,12 +13,14 @@ export const clients: ClientLogo[] = [
   { name: "Noches Blancas", logo: "/media/clients/nochesblancas.png", approved: true },
   { name: "Pantoja & Asociados", logo: "/media/clients/pantoja.png", approved: true },
   { name: "Maleducados", logo: "/media/clients/maleducados.png", approved: true },
+  { name: "Exafit Gold Nutrition", logo: "/media/clients/exafit-gold-nutrition-white.png", approved: true },
+  { name: "GMN Solutions of Nutrition", logo: "/media/clients/gmn-solutions-nutrition-white.png", approved: true },
+  { name: "SportsNutrition", logo: "/media/clients/sportsnutrition-white.png", approved: true },
   { name: "Innovahogar", logo: "/media/clients/innovahogar-white.png", approved: true },
   { name: "Cliente", logo: "/media/clients/unidentified-08-white.png", approved: true },
   { name: "Cliente", logo: "/media/clients/unidentified-10-white.png", approved: true },
   { name: "Cliente", logo: "/media/clients/unidentified-11-white.png", approved: true },
   // Pendiente de aprobación — añadir cuando se confirme el logo.
-  // Pendiente: agregar el logo confirmado de GMN Sport Nutrition.
 ];
 
 export interface StrategicAlly {
